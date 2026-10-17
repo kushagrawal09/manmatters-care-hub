@@ -56,8 +56,8 @@
     .custom-scrollbar::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
     .liquid-wave { transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
     @keyframes pulse-flame {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6)); }
-      50% { transform: scale(1.08); filter: drop-shadow(0 0 16px rgba(239, 68, 68, 0.8)); }
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.5)); }
+      50% { transform: scale(1.08); filter: drop-shadow(0 0 14px rgba(239, 68, 68, 0.8)); }
     }
     .flame-anim { animation: pulse-flame 1.8s infinite ease-in-out; }
   </style>
@@ -79,13 +79,13 @@
               <span class="font-bold text-sm sm:text-lg tracking-tight text-slate-900">MAN MATTERS</span>
               <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-700 px-1.5 sm:px-2 py-0.5 rounded-full border border-slate-200">Clinical Hub</span>
             </div>
-            <p class="text-[10px] sm:text-xs text-slate-500 font-medium hidden xs:block">Regimen Protocol • Day 42 (Week 6)</p>
+            <p class="text-[10px] sm:text-xs text-slate-500 font-medium hidden xs:block">Hair Regrowth Protocol • Day 42 (Week 6)</p>
           </div>
         </div>
 
         <!-- Telemetry Badges, WhatsApp Bot & Google Sign-In -->
         <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
-          <!-- Snapchat-Style Sticky Flame Pill -->
+          <!-- Snapchat-Style Flame Streak Button -->
           <button onclick="switchTab('streak')" class="flex items-center space-x-1 sm:space-x-1.5 bg-gradient-to-r from-amber-50 to-orange-100 border border-amber-300 px-2 sm:px-3 py-1 rounded-full cursor-pointer hover:shadow-xs transition">
             <span class="text-sm sm:text-base flame-anim">🔥</span>
             <span class="text-xs sm:text-sm font-black text-amber-900 font-mono" id="headerStreakCount">18</span>
@@ -121,13 +121,13 @@
 
       </div>
 
-      <!-- 7 PRIMARY COMPREHENSIVE TABS (Horizontal Scroll with visible scrollbar) -->
+      <!-- 7 PRIMARY TABS WITH SMOOTH SCROLL -->
       <nav class="flex space-x-1 sm:space-x-2 overflow-x-auto custom-scrollbar py-2.5 border-t border-oat-border text-xs font-semibold whitespace-nowrap">
         <button onclick="switchTab('overview')" id="nav-overview" class="tab-btn px-3 py-1.5 rounded-lg text-slate-900 bg-slate-100 font-bold transition shrink-0">
           <i class="fa-solid fa-table-columns mr-1 sm:mr-1.5 text-slate-800"></i>All at a Glance
         </button>
         <button onclick="switchTab('routine')" id="nav-routine" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
-          <i class="fa-solid fa-clock-rotate-left mr-1 sm:mr-1.5 text-amber-600"></i>Daily Protocol (AM/PM)
+          <i class="fa-solid fa-calendar-day mr-1 sm:mr-1.5 text-amber-600"></i>Daily Regimen Schedule
         </button>
         <button onclick="switchTab('supply')" id="nav-supply" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
           <i class="fa-solid fa-prescription-bottle-medical mr-1 sm:mr-1.5 text-rose-600"></i>Live Treatment Dispensary
@@ -139,7 +139,7 @@
           <i class="fa-solid fa-camera mr-1 sm:mr-1.5 text-purple-600"></i>15-Day Scalp Journal
         </button>
         <button onclick="switchTab('pouch')" id="nav-pouch" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
-          <i class="fa-solid fa-box-open mr-1 sm:mr-1.5 text-herbal-600"></i>Green Eco-Pouch
+          <i class="fa-solid fa-recycle mr-1 sm:mr-1.5 text-herbal-600"></i>Green Eco-Pouch
         </button>
         <button onclick="switchTab('ai')" id="nav-ai" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
           <i class="fa-solid fa-comment-medical mr-1 sm:mr-1.5 text-blue-600"></i>Dr. Rohan AI Coach
@@ -159,11 +159,11 @@
         </div>
         <div class="min-w-0">
           <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <span class="font-bold text-slate-900 text-xs sm:text-sm">Noticeable Shower Shedding? (Day 42 • Week 6)</span>
-            <span class="bg-amber-200/60 text-amber-900 text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Normal Transition Phase</span>
+            <span class="font-bold text-slate-900 text-xs sm:text-sm">Shower Hair Shedding? (Day 42 • Week 6)</span>
+            <span class="bg-amber-200/60 text-amber-900 text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Normal Turnover</span>
           </div>
           <p class="text-[11px] sm:text-xs text-slate-600 mt-1 max-w-3xl leading-relaxed">
-            Around weeks 3 to 8, weaker, resting hairs detach so fresh, thicker roots can sprout underneath. This initial shedding is clinical proof the follicles are actively responding to the formula.
+            During weeks 3 to 8, weaker, resting hairs detach so fresh, thicker roots can sprout underneath. This initial shedding is biological proof that dormant hair roots are actively responding to Minoxidil.
           </p>
         </div>
       </div>
@@ -180,12 +180,12 @@
         </div>
         <div class="min-w-0">
           <div class="text-xs font-bold text-slate-900 truncate">
-            Low Regimen Supply: Minoxidil 5% has <span id="bannerRemainingMl">7.0</span> ml remaining (~7 days)
+            Low Regimen Supply Alert: Man Matters Minoxidil 5% has <span id="bannerRemainingMl">7.0</span> ml left (~7 days)
           </div>
           <p class="text-[11px] text-slate-600 mt-0.5">Avoid routine gaps. Order now to hand over your filled Green Pouch to the rider during delivery.</p>
         </div>
       </div>
-      <button onclick="openReorderModal('Minoxidil 5% Solution (60ml)', 699)" class="w-full sm:w-auto bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs px-4 py-2 rounded-xl transition shadow-xs whitespace-nowrap shrink-0 text-center">
+      <button onclick="openReorderModal('Man Matters Minoxidil 5% Solution (60ml)', 699)" class="w-full sm:w-auto bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs px-4 py-2 rounded-xl transition shadow-xs whitespace-nowrap shrink-0 text-center">
         <i class="fa-solid fa-bolt mr-1.5"></i>1-Tap Reorder Refill • ₹699
       </button>
     </div>
@@ -248,14 +248,14 @@
             <span class="text-xl sm:text-3xl font-black text-herbal-600" id="ovPouchCount">3 / 3</span>
             <span class="text-[10px] text-slate-700 font-bold">Empties</span>
           </div>
-          <p class="text-[10px] sm:text-[11px] text-herbal-600 font-medium mt-1 truncate">Gift Sample Unlocked</p>
+          <p class="text-[10px] sm:text-[11px] text-herbal-600 font-medium mt-1 truncate">Sample Gift Unlocked</p>
         </div>
       </div>
 
-      <!-- Quick AM/PM Protocol Execution Cards -->
+      <!-- Quick AM/PM Protocol Execution Rows (With Reversible Undo Click Feature) -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         
-        <!-- MORNING (AM) -->
+        <!-- MORNING PROTOCOL (AM) -->
         <div class="bg-gradient-to-b from-amber-50/70 via-orange-50/30 to-white border border-amber-200/80 rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xs">
           <div class="flex items-center justify-between mb-3 sm:mb-4">
             <div class="flex items-center space-x-2.5">
@@ -264,7 +264,7 @@
               </div>
               <div>
                 <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Morning Protocol (AM)</h3>
-                <p class="text-[10px] sm:text-[11px] text-slate-500">Post-breakfast follicular root activation</p>
+                <p class="text-[10px] sm:text-[11px] text-slate-500">Post-breakfast nutritional roots activation</p>
               </div>
             </div>
             <span class="text-[10px] sm:text-[11px] font-bold text-amber-800 bg-amber-100/70 border border-amber-200 px-2 py-0.5 rounded-full">08:00 AM - 10:00 AM</span>
@@ -274,18 +274,22 @@
             <!-- Biotin Row -->
             <div class="bg-white border border-oat-border rounded-xl p-3 sm:p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div class="flex items-center space-x-3">
-                <div style="width: 42px; height: 50px;" class="bg-amber-50 rounded-lg border border-amber-300 p-1 flex flex-col justify-between items-center shrink-0">
-                  <div class="w-6 h-1.5 bg-amber-800/70 rounded-xs"></div>
+                <!-- Visual Gummy Jar Graphic (Small) -->
+                <div style="width: 44px; height: 52px;" class="bg-amber-50/90 rounded-lg border border-amber-300 p-1 flex flex-col justify-between items-center shrink-0">
+                  <div class="w-6 h-1.5 bg-amber-800/80 rounded-xs"></div>
                   <div class="w-6 flex-1 bg-white/70 border border-amber-300 rounded flex flex-col justify-end p-0.5 overflow-hidden">
-                    <div id="ovFigBiotin" class="bg-amber-500 rounded-b w-full" style="height: 70%;"></div>
+                    <div id="ovFigBiotin" class="bg-amber-400 rounded-b w-full" style="height: 70%;"></div>
                   </div>
                 </div>
                 <div>
-                  <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Biotin 5000mcg Gummies</h4>
-                  <p class="text-[11px] text-slate-500">Remaining: <span class="font-bold text-slate-800" id="ovTextBiotin">42 / 60 gummies</span></p>
+                  <div class="flex items-center space-x-1.5 flex-wrap">
+                    <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Man Matters Biotin Gummies</h4>
+                    <span class="text-[9px] bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded font-bold">Daily Mon–Sun</span>
+                  </div>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Remaining: <span class="font-bold text-slate-800" id="ovTextBiotin">42 / 60 gummies</span></p>
                 </div>
               </div>
-              <button onclick="logDose('biotin', 1, 'Gummy')" id="btn-ov-biotin" class="w-full sm:w-auto bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs">
+              <button onclick="toggleDose('biotin', 1, 'gummy')" id="btn-ov-biotin" class="w-full sm:w-auto bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs">
                 <i class="fa-solid fa-check"></i><span>Take Dose</span>
               </button>
             </div>
@@ -293,25 +297,29 @@
             <!-- Shampoo Row -->
             <div class="bg-white border border-oat-border rounded-xl p-3 sm:p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div class="flex items-center space-x-3">
-                <div style="width: 42px; height: 50px;" class="bg-blue-50 rounded-lg border border-blue-200 p-1 flex flex-col justify-between items-center shrink-0">
+                <!-- Visual Shampoo Pump (Small) -->
+                <div style="width: 44px; height: 52px;" class="bg-blue-50 rounded-lg border border-blue-200 p-1 flex flex-col justify-between items-center shrink-0">
                   <div class="w-4 h-1.5 bg-slate-400 rounded-xs"></div>
-                  <div class="w-5 flex-1 bg-white/70 border border-blue-300 rounded flex flex-col justify-end p-0.5 overflow-hidden">
+                  <div class="w-6 flex-1 bg-white/70 border border-blue-300 rounded flex flex-col justify-end p-0.5 overflow-hidden">
                     <div id="ovFigShampoo" class="bg-blue-500 rounded-b w-full" style="height: 67%;"></div>
                   </div>
                 </div>
                 <div>
-                  <h4 class="font-bold text-slate-900 text-xs sm:text-sm">1% Ketoconazole Scalp Cleanser</h4>
-                  <p class="text-[11px] text-slate-500">Remaining: <span class="font-bold text-slate-800" id="ovTextShampoo">135.0 / 200 ml</span></p>
+                  <div class="flex items-center space-x-1.5 flex-wrap">
+                    <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Man Matters Anti-Dandruff 1% Shampoo</h4>
+                    <span class="text-[9px] bg-blue-100 text-blue-800 px-1.5 py-0.2 rounded font-bold">Mon, Wed, Fri</span>
+                  </div>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Remaining: <span class="font-bold text-slate-800" id="ovTextShampoo">135.0 / 200 ml</span></p>
                 </div>
               </div>
-              <button onclick="logDose('shampoo', 5, 'ml')" id="btn-ov-shampoo" class="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5">
+              <button onclick="toggleDose('shampoo', 5, 'ml')" id="btn-ov-shampoo" class="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5">
                 <span>Not Today</span>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- NIGHT (PM) -->
+        <!-- NIGHT PROTOCOL (PM) -->
         <div class="bg-gradient-to-b from-[#111A24] via-[#14202D] to-[#182432] border border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xs text-white">
           <div class="flex items-center justify-between mb-3 sm:mb-4">
             <div class="flex items-center space-x-2.5">
@@ -330,37 +338,45 @@
             <!-- Minoxidil Row -->
             <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-3 sm:p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div class="flex items-center space-x-3">
-                <div style="width: 42px; height: 50px;" class="bg-slate-900 rounded-lg border border-amber-800 p-1 flex flex-col justify-between items-center shrink-0">
+                <!-- Visual Dropper Bottle (Small) -->
+                <div style="width: 44px; height: 52px;" class="bg-slate-900 rounded-lg border border-amber-800 p-1 flex flex-col justify-between items-center shrink-0">
                   <div class="w-3 h-1.5 bg-slate-700 rounded-xs"></div>
-                  <div class="w-5 flex-1 bg-amber-950/60 border border-amber-600 rounded flex flex-col justify-end p-0.5 overflow-hidden">
+                  <div class="w-6 flex-1 bg-amber-950/60 border border-amber-600 rounded flex flex-col justify-end p-0.5 overflow-hidden">
                     <div id="ovFigMinox" class="bg-amber-500 rounded-b w-full liquid-wave" style="height: 12%;"></div>
                   </div>
                 </div>
                 <div>
-                  <h4 class="font-bold text-white text-xs sm:text-sm">Minoxidil 5% Topical Solution</h4>
-                  <p class="text-[11px] text-amber-300 font-semibold">Remaining: <span class="font-bold" id="ovTextMinox">7.0 / 60 ml</span> (Low Supply!)</p>
+                  <div class="flex items-center space-x-1.5 flex-wrap">
+                    <h4 class="font-bold text-white text-xs sm:text-sm">Man Matters Minoxidil 5% Solution</h4>
+                    <span class="text-[9px] bg-terracotta-500/20 text-terracotta-100 border border-terracotta-500/30 px-1.5 py-0.2 rounded font-bold">Daily Mon–Sun</span>
+                  </div>
+                  <p class="text-[11px] text-amber-300 font-semibold mt-0.5">Remaining: <span class="font-bold" id="ovTextMinox">7.0 / 60 ml</span> (Low Supply!)</p>
                 </div>
               </div>
-              <button onclick="logDose('minoxidil', 1, 'ml')" id="btn-ov-minoxidil" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs">
+              <button onclick="toggleDose('minoxidil', 1, 'ml')" id="btn-ov-minoxidil" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs">
                 <i class="fa-solid fa-droplet"></i><span>Log 1.0 ml</span>
               </button>
             </div>
 
-            <!-- DHT Blocker Row -->
+            <!-- DHT Blocker Tablets Row -->
             <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-3 sm:p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div class="flex items-center space-x-3">
-                <div style="width: 42px; height: 50px;" class="bg-slate-900 rounded-lg border border-slate-700 p-1 flex flex-col justify-between items-center shrink-0">
+                <!-- Visual Tablet Jar (Small) -->
+                <div style="width: 44px; height: 52px;" class="bg-slate-900 rounded-lg border border-slate-700 p-1 flex flex-col justify-between items-center shrink-0">
                   <div class="w-5 h-1.5 bg-slate-500 rounded-xs"></div>
-                  <div class="w-5 flex-1 bg-slate-800 border border-emerald-600 rounded flex flex-col justify-end p-0.5 overflow-hidden">
+                  <div class="w-6 flex-1 bg-slate-800 border border-emerald-600 rounded flex flex-col justify-end p-0.5 overflow-hidden">
                     <div id="ovFigDht" class="bg-emerald-500 rounded-b w-full" style="height: 50%;"></div>
                   </div>
                 </div>
                 <div>
-                  <h4 class="font-bold text-white text-xs sm:text-sm">Saw Palmetto DHT Blocker</h4>
-                  <p class="text-[11px] text-slate-300">Remaining: <span class="font-bold text-white" id="ovTextDht">30 / 60 caps</span></p>
+                  <div class="flex items-center space-x-1.5 flex-wrap">
+                    <h4 class="font-bold text-white text-xs sm:text-sm">Man Matters DHT Blocker Tablets</h4>
+                    <span class="text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-1.5 py-0.2 rounded font-bold">Daily Mon–Sun</span>
+                  </div>
+                  <p class="text-[11px] text-slate-300 mt-0.5">Remaining: <span class="font-bold text-white" id="ovTextDht">30 / 60 tablets</span></p>
                 </div>
               </div>
-              <button onclick="logDose('dht', 1, 'cap')" id="btn-ov-dht" class="w-full sm:w-auto bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs">
+              <button onclick="toggleDose('dht', 1, 'tablet')" id="btn-ov-dht" class="w-full sm:w-auto bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs">
                 <i class="fa-solid fa-check"></i><span>Take Dose</span>
               </button>
             </div>
@@ -372,142 +388,169 @@
     </div>
 
     <!-- ======================================================== -->
-    <!-- TAB 2: DAILY PROTOCOL & REGIMEN BUILDER                  -->
+    <!-- TAB 2: DAILY REGIMEN SCHEDULE (MORNING / NIGHT & DAYS)   -->
     <!-- ======================================================== -->
     <div id="view-routine" class="hidden space-y-4 sm:space-y-6">
       
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900">Custom Regimen Protocol & Prescriptions</h2>
-          <p class="text-xs text-slate-500">Add, edit, or adjust application dosages, exact application techniques, and habit timings.</p>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900">Daily Regimen Protocol & Clinical Application Rules</h2>
+          <p class="text-xs text-slate-500">Distinguished by Morning (AM) and Night (PM) with exact weekly schedules, dosages, and application rules.</p>
         </div>
         <button onclick="openCustomHabitModal()" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs transition flex items-center justify-center space-x-1.5">
           <i class="fa-solid fa-plus"></i>
-          <span>Add Product to Regimen</span>
+          <span>Add Custom Item</span>
         </button>
       </div>
 
-      <!-- Clinical Application Protocol Cards (With "How Much" & "How to Apply" Clinical Directives) -->
-      <div class="space-y-4" id="routineCardsList">
+      <!-- MORNING (AM) PROTOCOL -->
+      <div class="space-y-3">
+        <div class="flex items-center space-x-2 border-b border-amber-200 pb-2">
+          <i class="fa-solid fa-sun text-amber-500 text-base"></i>
+          <h3 class="font-bold text-slate-900 text-sm sm:text-base">Morning Schedule (AM)</h3>
+        </div>
 
-        <!-- Product 1: Minoxidil 5% -->
-        <div class="bg-white border border-oat-border rounded-2xl p-4 sm:p-5 shadow-xs space-y-3">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
-            <div>
-              <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded-md">Topical Vasodilator</span>
-              <h3 class="font-bold text-slate-900 text-sm sm:text-base mt-1">Minoxidil 5% Topical Solution</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Biotin Card -->
+          <div class="bg-white border border-oat-border rounded-2xl p-4 sm:p-5 shadow-xs space-y-3">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[9px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">Every Day • Mon to Sun</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">Man Matters Biotin Hair Gummies</h4>
+              </div>
+              <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded-lg font-semibold"><i class="fa-regular fa-clock mr-1"></i>Post Breakfast</span>
             </div>
-            <div class="flex items-center space-x-2">
-              <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg font-semibold"><i class="fa-regular fa-clock mr-1"></i>10:00 PM Nightly</span>
-              <button onclick="deleteRegimenItem(this)" class="text-slate-400 hover:text-red-500 text-xs px-2 py-1"><i class="fa-solid fa-trash"></i></button>
+            <div class="space-y-2 text-xs">
+              <div class="bg-emerald-50/70 border border-emerald-200 rounded-xl p-2.5">
+                <strong class="text-emerald-900 block">How Much to Consume:</strong>
+                <p class="text-slate-700 mt-0.5">Take exactly <strong>1 gummy</strong> daily. No water required.</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">
+                <strong class="text-slate-900 block">Application Rule:</strong>
+                <p class="text-slate-600 mt-0.5">Chew completely after breakfast. Healthy fats in your meal help optimal zinc and biotin root absorption.</p>
+              </div>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-            <div class="bg-amber-50/60 border border-amber-200/70 rounded-xl p-3">
-              <span class="font-bold text-amber-900 flex items-center"><i class="fa-solid fa-eye-dropper mr-1.5 text-amber-600"></i>How Much to Apply:</span>
-              <p class="text-slate-700 mt-1">Apply exactly <strong>1.0 ml</strong> using the calibrated dropper. Do not apply more than 1.0 ml per session; it does not accelerate growth.</p>
+
+          <!-- Shampoo Card -->
+          <div class="bg-white border border-oat-border rounded-2xl p-4 sm:p-5 shadow-xs space-y-3">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[9px] font-bold uppercase tracking-wider bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md">3x Weekly • Mon, Wed, Fri</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">Man Matters Anti-Dandruff 1% Shampoo</h4>
+              </div>
+              <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded-lg font-semibold"><i class="fa-solid fa-shower mr-1"></i>Morning Shower</span>
             </div>
-            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span class="font-bold text-slate-900 flex items-center"><i class="fa-solid fa-hand-dots mr-1.5 text-slate-600"></i>How to Apply Correctly:</span>
-              <p class="text-slate-600 mt-1">Ensure scalp is 100% dry. Part hair to expose vertex crown thinning. Spread droplets gently with fingertips in circular motions. <strong>Do not blow-dry.</strong></p>
+            <div class="space-y-2 text-xs">
+              <div class="bg-blue-50/70 border border-blue-200 rounded-xl p-2.5">
+                <strong class="text-blue-900 block">How Much to Apply:</strong>
+                <p class="text-slate-700 mt-0.5">Dispense <strong>1 to 2 coin-sized pumps (~5 ml)</strong> onto wet scalp.</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">
+                <strong class="text-slate-900 block">Application Rule:</strong>
+                <p class="text-slate-600 mt-0.5">Massage directly into the scalp and <strong>leave active lather on for 2 to 3 minutes</strong> before rinsing so the Ketoconazole can break down DHT and dandruff.</p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Product 2: Biotin Gummies -->
-        <div class="bg-white border border-oat-border rounded-2xl p-4 sm:p-5 shadow-xs space-y-3">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
-            <div>
-              <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">Nutritional Follicle Fuel</span>
-              <h3 class="font-bold text-slate-900 text-sm sm:text-base mt-1">Biotin 5000mcg Hair Gummies</h3>
+      <!-- NIGHT (PM) PROTOCOL -->
+      <div class="space-y-3 pt-2">
+        <div class="flex items-center space-x-2 border-b border-indigo-200 pb-2">
+          <i class="fa-solid fa-moon text-indigo-500 text-base"></i>
+          <h3 class="font-bold text-slate-900 text-sm sm:text-base">Night Schedule (PM)</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Minoxidil Card -->
+          <div class="bg-white border border-oat-border rounded-2xl p-4 sm:p-5 shadow-xs space-y-3">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[9px] font-bold uppercase tracking-wider bg-terracotta-100 text-terracotta-800 px-2 py-0.5 rounded-md">Every Day • Mon to Sun</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">Man Matters Minoxidil 5% Solution</h4>
+              </div>
+              <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded-lg font-semibold"><i class="fa-regular fa-clock mr-1"></i>10:00 PM Bedtime</span>
             </div>
-            <div class="flex items-center space-x-2">
-              <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg font-semibold"><i class="fa-regular fa-clock mr-1"></i>09:00 AM Morning</span>
-              <button onclick="deleteRegimenItem(this)" class="text-slate-400 hover:text-red-500 text-xs px-2 py-1"><i class="fa-solid fa-trash"></i></button>
+            <div class="space-y-2 text-xs">
+              <div class="bg-amber-50/70 border border-amber-200 rounded-xl p-2.5">
+                <strong class="text-amber-900 block">How Much to Apply:</strong>
+                <p class="text-slate-700 mt-0.5">Use the graduated pipette dropper to draw exactly <strong>1.0 ml</strong>. Do not exceed 1.0 ml per day.</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">
+                <strong class="text-slate-900 block">Application Rule:</strong>
+                <p class="text-slate-600 mt-0.5">Scalp must be bone dry. Part your hair and drop directly on thinning vertex areas. Spread gently with fingertips. <strong>Do not blow-dry or massage vigorously.</strong></p>
+              </div>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-            <div class="bg-emerald-50/60 border border-emerald-200/70 rounded-xl p-3">
-              <span class="font-bold text-emerald-900 flex items-center"><i class="fa-solid fa-cubes-stacked mr-1.5 text-emerald-600"></i>How Much to Consume:</span>
-              <p class="text-slate-700 mt-1">Take <strong>1 chewable gummy</strong> daily. No water needed.</p>
+
+          <!-- DHT Blocker Card -->
+          <div class="bg-white border border-oat-border rounded-2xl p-4 sm:p-5 shadow-xs space-y-3">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[9px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">Every Day • Mon to Sun</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">Man Matters DHT Blocker Tablets</h4>
+              </div>
+              <span class="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded-lg font-semibold"><i class="fa-regular fa-clock mr-1"></i>10:30 PM Nightly</span>
             </div>
-            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span class="font-bold text-slate-900 flex items-center"><i class="fa-solid fa-utensils mr-1.5 text-slate-600"></i>How to Take Correctly:</span>
-              <p class="text-slate-600 mt-1">Chew thoroughly after your morning breakfast. Pairing with dietary fats in your breakfast boosts biotin and zinc absorption.</p>
+            <div class="space-y-2 text-xs">
+              <div class="bg-emerald-50/70 border border-emerald-200 rounded-xl p-2.5">
+                <strong class="text-emerald-900 block">How Much to Consume:</strong>
+                <p class="text-slate-700 mt-0.5">Take exactly <strong>1 tablet</strong> every night before bed with a glass of water.</p>
+              </div>
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">
+                <strong class="text-slate-900 block">Application Rule:</strong>
+                <p class="text-slate-600 mt-0.5">Swallow with normal or lukewarm water after your night meal to block the internal enzyme conversion of testosterone to follicle-shrinking DHT.</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Product 3: Ketoconazole 1% -->
-        <div class="bg-white border border-oat-border rounded-2xl p-4 sm:p-5 shadow-xs space-y-3">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
-            <div>
-              <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-800 px-2 py-0.5 rounded-md">Anti-Microbial / DHT Cleanser</span>
-              <h3 class="font-bold text-slate-900 text-sm sm:text-base mt-1">1% Ketoconazole Scalp Cleanser</h3>
-            </div>
-            <div class="flex items-center space-x-2">
-              <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg font-semibold"><i class="fa-regular fa-calendar-days mr-1"></i>3 Times Weekly</span>
-              <button onclick="deleteRegimenItem(this)" class="text-slate-400 hover:text-red-500 text-xs px-2 py-1"><i class="fa-solid fa-trash"></i></button>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-            <div class="bg-blue-50/60 border border-blue-200/70 rounded-xl p-3">
-              <span class="font-bold text-blue-900 flex items-center"><i class="fa-solid fa-pump-soap mr-1.5 text-blue-600"></i>How Much to Apply:</span>
-              <p class="text-slate-700 mt-1">Dispense <strong>1 to 2 coin-sized pumps (~5 ml)</strong> into damp hands.</p>
-            </div>
-            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
-              <span class="font-bold text-slate-900 flex items-center"><i class="fa-solid fa-stopwatch mr-1.5 text-slate-600"></i>Critical Usage Rule:</span>
-              <p class="text-slate-600 mt-1">Lather deep into scalp roots and <strong>leave active lather on scalp for a full 2 to 3 minutes</strong> before rinsing with cool water.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </div>
 
     <!-- ======================================================== -->
-    <!-- TAB 3: LIVE TREATMENT DISPENSARY & VISUAL BOTTLES        -->
+    <!-- TAB 3: LIVE TREATMENT DISPENSARY & VISUAL SOLID BOTTLES   -->
     <!-- ======================================================== -->
     <div id="view-supply" class="hidden space-y-4 sm:space-y-6">
       
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900">Live Treatment Dispensary & Bottle Levels</h2>
-          <p class="text-xs text-slate-500">Realistic package telemetry synced in real-time. Levels decrement when doses are logged.</p>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900">Live Treatment Dispensary & Physical Packaging</h2>
+          <p class="text-xs text-slate-500">Realistic product containers showing liquid solutions, real gummy chewables, and clinical tablets.</p>
         </div>
         <button onclick="resetSupplyDemo()" class="text-xs text-slate-500 hover:text-slate-800 underline">
-          Reset Bottles to Full for Demo
+          Reset All Packaging to Full (Demo)
         </button>
       </div>
 
       <!-- Real Looking Large Bottle Display Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
-        <!-- Visual 1: Minoxidil 5% Glass Apothecary Dropper -->
+        <!-- Visual 1: Minoxidil 5% Glass Amber Dropper (Liquid Wave) -->
         <div class="bg-white border-2 border-amber-300 rounded-3xl p-5 shadow-xs flex flex-col justify-between items-center text-center relative overflow-hidden">
           <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-terracotta-100 text-terracotta-600 px-2 py-0.5 rounded-full">Low Supply</span>
           
           <div class="w-full flex justify-center py-4">
-            <!-- Realistic Large Dropper Bottle -->
-            <div style="width: 80px; height: 160px;" class="bg-gradient-to-b from-amber-950 via-amber-900 to-amber-950 rounded-b-2xl border-2 border-amber-800 p-1 flex flex-col justify-between items-center relative shadow-md">
+            <!-- Large Calibrated Dropper Bottle -->
+            <div style="width: 82px; height: 165px;" class="bg-gradient-to-b from-amber-950 via-amber-900 to-amber-950 rounded-b-2xl border-2 border-amber-800 p-1 flex flex-col justify-between items-center relative shadow-md">
               <!-- Rubber Pipette Cap -->
               <div class="w-7 h-5 bg-slate-900 rounded-t-lg -mt-6 border border-slate-700"></div>
-              <div class="w-10 h-2 bg-amber-700 border-b border-amber-600"></div>
+              <div class="w-11 h-2 bg-amber-700 border-b border-amber-600"></div>
               <!-- Glass Chamber with Liquid Level -->
-              <div class="w-full flex-1 rounded-b-xl flex flex-col justify-end p-1 relative overflow-hidden bg-black/30">
+              <div class="w-full flex-1 rounded-b-xl flex flex-col justify-end p-1 relative overflow-hidden bg-black/40">
                 <div id="bigMinoxLiquid" class="bg-gradient-to-t from-amber-500 to-amber-400 w-full rounded-b-lg liquid-wave" style="height: 12%;"></div>
-                <!-- Glass Reflection & Dropper Tube -->
+                <!-- Glass Dropper Tube -->
                 <div class="absolute inset-0 flex justify-center pointer-events-none">
                   <div class="w-1 bg-white/40 h-full"></div>
                 </div>
-                <div class="absolute top-2 right-1 text-[8px] font-mono text-amber-200/80">60ml<br>40ml<br>20ml<br>0ml</div>
+                <div class="absolute top-2 right-1 text-[8px] font-mono text-amber-200/80 leading-3">60ml<br><br>40ml<br><br>20ml<br><br>0ml</div>
               </div>
             </div>
           </div>
 
           <div class="w-full">
-            <h3 class="font-bold text-slate-900 text-sm">Minoxidil 5% Solution</h3>
+            <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Man Matters Minoxidil 5% (60ml)</h3>
             <div class="mt-1 flex items-baseline justify-center space-x-1 font-mono">
               <span class="text-2xl font-black text-slate-900" id="dispMinoxMl">7.0</span>
               <span class="text-xs text-slate-500 font-bold">/ 60.0 ml</span>
@@ -516,33 +559,40 @@
               <div id="dispBarMinox" class="bg-terracotta-500 h-2 rounded-full" style="width: 12%"></div>
             </div>
             <p class="text-[11px] text-terracotta-600 font-bold mt-2">~7 Days Remaining</p>
-            <button onclick="openReorderModal('Minoxidil 5% Solution (60ml)', 699)" class="mt-3 w-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs py-2 rounded-xl transition shadow-xs">
+            <button onclick="openReorderModal('Man Matters Minoxidil 5% Solution (60ml)', 699)" class="mt-3 w-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs py-2 rounded-xl transition shadow-xs">
               1-Tap Reorder Refill • ₹699
             </button>
           </div>
         </div>
 
-        <!-- Visual 2: Biotin Gummy Tub -->
+        <!-- Visual 2: Biotin Gummies Tub (Real Solid Gummies Container - NO LIQUID) -->
         <div class="bg-white border border-oat-border rounded-3xl p-5 shadow-xs flex flex-col justify-between items-center text-center relative overflow-hidden">
           <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">Good Supply</span>
           
           <div class="w-full flex justify-center py-4">
-            <!-- Realistic Gummy Tub -->
-            <div style="width: 100px; height: 140px;" class="bg-slate-50 rounded-2xl border-2 border-slate-300 p-2 flex flex-col justify-between items-center relative shadow-md">
-              <!-- Tub Cap -->
-              <div class="w-24 h-5 bg-amber-800 rounded-t-md -mt-5 border border-amber-900 shadow-xs"></div>
-              <!-- Tub Body -->
-              <div class="w-full flex-1 border border-slate-200 rounded-b-xl flex flex-col justify-end p-1 overflow-hidden bg-white relative">
-                <div id="bigBiotinLiquid" class="bg-gradient-to-t from-amber-400 to-amber-300 w-full rounded-b-lg transition-all" style="height: 70%;"></div>
-                <div class="absolute inset-0 flex items-center justify-center font-bold text-lg text-amber-900/60">
-                  🍬 🍬 🍬
+            <!-- Transparent Gummy Tub with Physical Gummy Icons Stacked -->
+            <div style="width: 104px; height: 165px;" class="bg-slate-50/90 rounded-2xl border-2 border-slate-300 p-2 flex flex-col justify-between items-center relative shadow-md">
+              <!-- Dark Wide Cap -->
+              <div class="w-26 h-5 bg-amber-900 rounded-t-md -mt-5 border border-amber-950 shadow-xs"></div>
+              <!-- Transparent Plastic Tub Filled with Individual Gummies -->
+              <div class="w-full flex-1 border border-slate-200 rounded-b-xl flex flex-col justify-end p-1.5 overflow-hidden bg-white/80 relative">
+                <!-- Stacked Gummy Cluster Area -->
+                <div id="gummyClusterContainer" class="w-full flex flex-wrap content-end justify-center gap-1.5 transition-all" style="height: 70%;">
+                  <!-- Individual Visual Gummy Bear Candies -->
+                  <span class="text-base select-none">🧸</span><span class="text-base select-none">🧸</span>
+                  <span class="text-base select-none">🧸</span><span class="text-base select-none">🧸</span>
+                  <span class="text-base select-none">🧸</span><span class="text-base select-none">🧸</span>
+                  <span class="text-base select-none">🧸</span><span class="text-base select-none">🧸</span>
+                </div>
+                <div class="absolute top-1 left-1/2 -translate-x-1/2 text-[9px] font-bold text-slate-400 uppercase tracking-widest">
+                  BIOTIN
                 </div>
               </div>
             </div>
           </div>
 
           <div class="w-full">
-            <h3 class="font-bold text-slate-900 text-sm">Biotin 5000mcg Gummies</h3>
+            <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Man Matters Biotin Gummies (60s)</h3>
             <div class="mt-1 flex items-baseline justify-center space-x-1 font-mono">
               <span class="text-2xl font-black text-slate-900" id="dispBiotinQty">42</span>
               <span class="text-xs text-slate-500 font-bold">/ 60 gummies</span>
@@ -557,13 +607,13 @@
           </div>
         </div>
 
-        <!-- Visual 3: Ketoconazole Cleanser Pump Bottle -->
+        <!-- Visual 3: Ketoconazole Cleanser Pump Dispenser (Liquid Cleanser) -->
         <div class="bg-white border border-oat-border rounded-3xl p-5 shadow-xs flex flex-col justify-between items-center text-center relative overflow-hidden">
           <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Good Supply</span>
           
           <div class="w-full flex justify-center py-4">
             <!-- Pump Shampoo Bottle -->
-            <div style="width: 80px; height: 155px;" class="bg-slate-50 rounded-2xl border-2 border-slate-300 p-1.5 flex flex-col justify-between items-center relative shadow-md">
+            <div style="width: 82px; height: 165px;" class="bg-slate-50 rounded-2xl border-2 border-slate-300 p-1.5 flex flex-col justify-between items-center relative shadow-md">
               <!-- Pump Head -->
               <div class="w-6 h-3 bg-slate-600 rounded-t -mt-4"></div>
               <div class="w-10 h-1.5 bg-slate-700"></div>
@@ -578,7 +628,7 @@
           </div>
 
           <div class="w-full">
-            <h3 class="font-bold text-slate-900 text-sm">Ketoconazole 1% Cleanser</h3>
+            <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Anti-Dandruff 1% Shampoo (200ml)</h3>
             <div class="mt-1 flex items-baseline justify-center space-x-1 font-mono">
               <span class="text-2xl font-black text-slate-900" id="dispShampooMl">135.0</span>
               <span class="text-xs text-slate-500 font-bold">/ 200.0 ml</span>
@@ -593,28 +643,37 @@
           </div>
         </div>
 
-        <!-- Visual 4: Saw Palmetto DHT Capsule Jar -->
+        <!-- Visual 4: Man Matters DHT Blocker Tablets Container (Solid Clinical Tablets - NO LIQUID) -->
         <div class="bg-white border border-oat-border rounded-3xl p-5 shadow-xs flex flex-col justify-between items-center text-center relative overflow-hidden">
           <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">Moderate</span>
           
           <div class="w-full flex justify-center py-4">
-            <!-- Capsule Jar -->
-            <div style="width: 80px; height: 140px;" class="bg-slate-900 rounded-2xl border-2 border-slate-700 p-2 flex flex-col justify-between items-center relative shadow-md">
+            <!-- Medicine Jar Filled with Tablets -->
+            <div style="width: 84px; height: 165px;" class="bg-slate-900 rounded-2xl border-2 border-slate-700 p-2 flex flex-col justify-between items-center relative shadow-md">
               <div class="w-18 h-4 bg-slate-600 rounded-t -mt-4 border border-slate-500"></div>
-              <div class="w-full flex-1 border border-slate-700 rounded-b-xl flex flex-col justify-end p-1 overflow-hidden bg-slate-800 relative">
-                <div id="bigDhtLiquid" class="bg-gradient-to-t from-emerald-600 to-emerald-400 w-full rounded-b-lg transition-all" style="height: 50%;"></div>
-                <div class="absolute inset-0 flex items-center justify-center font-bold text-xs text-emerald-200">
-                  💊 💊
+              <!-- Tablet Chamber with Real Circular/Capsule Pill Icons -->
+              <div class="w-full flex-1 border border-slate-700 rounded-b-xl flex flex-col justify-end p-1.5 overflow-hidden bg-slate-800/90 relative">
+                <div id="tabletClusterContainer" class="w-full flex flex-wrap content-end justify-center gap-1.5 transition-all" style="height: 50%;">
+                  <!-- Visual Tablets -->
+                  <div class="w-4 h-4 rounded-full bg-emerald-400 border border-white/60 shadow-xs"></div>
+                  <div class="w-4 h-4 rounded-full bg-emerald-400 border border-white/60 shadow-xs"></div>
+                  <div class="w-4 h-4 rounded-full bg-emerald-400 border border-white/60 shadow-xs"></div>
+                  <div class="w-4 h-4 rounded-full bg-emerald-400 border border-white/60 shadow-xs"></div>
+                  <div class="w-4 h-4 rounded-full bg-emerald-400 border border-white/60 shadow-xs"></div>
+                  <div class="w-4 h-4 rounded-full bg-emerald-400 border border-white/60 shadow-xs"></div>
+                </div>
+                <div class="absolute top-1 left-1/2 -translate-x-1/2 text-[8px] font-bold text-slate-400 uppercase tracking-wider">
+                  DHT BLOCK
                 </div>
               </div>
             </div>
           </div>
 
           <div class="w-full">
-            <h3 class="font-bold text-slate-900 text-sm">Saw Palmetto DHT Blocker</h3>
+            <h3 class="font-bold text-slate-900 text-xs sm:text-sm">DHT Blocker Tablets (60s)</h3>
             <div class="mt-1 flex items-baseline justify-center space-x-1 font-mono">
               <span class="text-2xl font-black text-slate-900" id="dispDhtQty">30</span>
-              <span class="text-xs text-slate-500 font-bold">/ 60 caps</span>
+              <span class="text-xs text-slate-500 font-bold">/ 60 tablets</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-2 mt-2 overflow-hidden">
               <div id="dispBarDht" class="bg-emerald-500 h-2 rounded-full" style="width: 50%"></div>
@@ -635,7 +694,7 @@
     <!-- ======================================================== -->
     <div id="view-streak" class="hidden space-y-4 sm:space-y-6">
       
-      <!-- Prominent Snapchat-Style Adherence Hero Banner -->
+      <!-- Snapchat-Style Flame Adherence Hero Banner -->
       <div class="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 rounded-3xl p-6 sm:p-8 text-white shadow-lg relative overflow-hidden">
         <div class="absolute -right-8 -bottom-8 opacity-20 text-9xl">🔥</div>
         
@@ -643,14 +702,14 @@
           <div class="space-y-2">
             <div class="inline-flex items-center space-x-2 bg-black/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-amber-200">
               <i class="fa-solid fa-hourglass-half text-amber-300"></i>
-              <span>Dose Window Closes in: <span id="streakCountdownText" class="font-mono text-white">07h : 14m : 22s</span></span>
+              <span>Dose Window Closes in: <span id="streakCountdownText" class="font-mono text-white">06h : 22m : 18s</span></span>
             </div>
             <div class="flex items-center space-x-3">
               <span class="text-5xl sm:text-7xl font-black font-mono tracking-tight" id="heroStreakCount">18</span>
               <div>
                 <span class="text-2xl sm:text-3xl flame-anim inline-block">🔥</span>
                 <h2 class="text-xl sm:text-2xl font-black uppercase tracking-wider">Day Regimen Streak</h2>
-                <p class="text-xs sm:text-sm text-amber-100">Don't break the chain. 180 consecutive days are biologically required for follicle density.</p>
+                <p class="text-xs sm:text-sm text-amber-100">Don't break the streak number! 180 consecutive days are biologically required for visible scalp root density.</p>
               </div>
             </div>
           </div>
@@ -661,7 +720,7 @@
             </div>
             <div>
               <div class="text-xs font-bold uppercase tracking-wider text-amber-200">Grace Shield Ready</div>
-              <p class="text-[11px] text-white/90">1 weekly missed dose automatically protected.</p>
+              <p class="text-[11px] text-white/90">1 weekly missed dose protected without losing your streak number.</p>
             </div>
           </div>
         </div>
@@ -699,8 +758,8 @@
       
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900">15-Day Photobiological Scalp Journal</h2>
-          <p class="text-xs text-slate-500">Upload your vertex photo every 15 days. Dr. Rohan's computer vision algorithm audits root activity.</p>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900">15-Day Scalp Progress Journal & AI Audit</h2>
+          <p class="text-xs text-slate-500">Upload your vertex photo every 15 days. Dr. Rohan's computer vision algorithm audits root density and shedding.</p>
         </div>
         <label for="scalpPhotoInput" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs transition flex items-center justify-center space-x-1.5 cursor-pointer">
           <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -709,7 +768,7 @@
         <input type="file" id="scalpPhotoInput" accept="image/*" class="hidden" onchange="handleScalpPhotoUpload(event)">
       </div>
 
-      <!-- AI Clinical Review Feedback Card (Appears after photo upload) -->
+      <!-- AI Clinical Review Feedback Card (Triggered upon photo upload) -->
       <div id="aiAuditCard" class="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-5 sm:p-6 shadow-md space-y-4 hidden">
         <div class="flex items-center justify-between border-b border-purple-800 pb-3">
           <div class="flex items-center space-x-2">
@@ -813,7 +872,7 @@
             <div class="text-center p-4 sm:p-6">
               <i class="fa-solid fa-chart-line text-3xl sm:text-4xl text-amber-400 mb-2"></i>
               <div class="font-bold text-xs sm:text-sm">Day 0 Baseline State</div>
-              <p class="text-[11px] sm:text-xs text-slate-300 mt-1 max-w-sm">Baseline thinning pattern at crown; inactive telogen resting follicles.</p>
+              <p class="text-[10px] sm:text-xs text-slate-300 mt-1 max-w-sm">Baseline thinning pattern at crown; inactive telogen resting follicles.</p>
             </div>
             <span class="absolute bottom-3 left-3 bg-black/70 text-white text-[10px] font-bold px-2 py-0.5 rounded">Day 0 (Baseline)</span>
           </div>
@@ -835,11 +894,35 @@
       
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 class="text-lg sm:text-xl font-bold text-slate-900">Green Eco-Pouch Circular Stewardship</h2>
-          <p class="text-xs text-slate-500">Stash finished empties privately at home. Hand over to the delivery partner at your doorstep to claim discovery gifts.</p>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900">Green Eco-Pouch Doorstep Recycling & Sampling</h2>
+          <p class="text-xs text-slate-500">Stash finished empties privately at home. Hand over to the delivery partner during your next refill to claim discovery gifts.</p>
         </div>
         <div class="bg-herbal-50 border border-herbal-200 text-herbal-700 px-3.5 py-1.5 rounded-xl text-xs font-bold">
           <i class="fa-solid fa-leaf mr-1"></i>Zero-Landfill Mission
+        </div>
+      </div>
+
+      <!-- 4-Step Educational Process Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+        <div class="bg-white p-3.5 rounded-2xl border border-slate-200">
+          <div class="w-6 h-6 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center justify-center mb-2">1</div>
+          <h4 class="font-bold text-slate-900 text-xs">Save Your Empties</h4>
+          <p class="text-[11px] text-slate-500 mt-0.5">Drop empty droppers, tubs, or bottles into the opaque Green Eco-Pouch.</p>
+        </div>
+        <div class="bg-white p-3.5 rounded-2xl border border-slate-200">
+          <div class="w-6 h-6 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center justify-center mb-2">2</div>
+          <h4 class="font-bold text-slate-900 text-xs">Add Containers Below</h4>
+          <p class="text-[11px] text-slate-500 mt-0.5">Select accepted bottle types from the dropdown to fill your digital pouch.</p>
+        </div>
+        <div class="bg-white p-3.5 rounded-2xl border border-slate-200">
+          <div class="w-6 h-6 rounded-full bg-slate-900 text-white text-xs font-bold flex items-center justify-center mb-2">3</div>
+          <h4 class="font-bold text-slate-900 text-xs">Quick Photo Audit</h4>
+          <p class="text-[11px] text-slate-500 mt-0.5">Snap a photo of the filled pouch to verify and unlock your free trial gift.</p>
+        </div>
+        <div class="bg-white p-3.5 rounded-2xl border border-slate-200">
+          <div class="w-6 h-6 rounded-full bg-herbal-600 text-white text-xs font-bold flex items-center justify-center mb-2">4</div>
+          <h4 class="font-bold text-slate-900 text-xs">Doorstep Handover</h4>
+          <p class="text-[11px] text-slate-500 mt-0.5">Hand the sealed pouch to the delivery agent when your next refill arrives.</p>
         </div>
       </div>
 
@@ -870,80 +953,95 @@
             <i class="fa-solid fa-recycle"></i>
           </div>
           <div>
-            <span class="text-2xl font-black text-slate-900 font-mono">3 Bottles</span>
-            <p class="text-[11px] text-slate-500">Recycled via Doorstep Rider</p>
+            <span class="text-2xl font-black text-slate-900 font-mono" id="recycledCountText">3 Containers</span>
+            <p class="text-[11px] text-slate-500">In Active Pouch</p>
           </div>
         </div>
       </div>
 
-      <!-- Prescribed Empties Stowing Selector -->
+      <!-- Interactive Empties Stowing: Manual Dropdown Adder -->
       <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-5 shadow-xs space-y-4">
-        <div class="flex items-center justify-between border-b pb-3">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b pb-3">
           <div>
-            <h3 class="font-bold text-slate-900 text-sm">Select Finished Containers Stowed in Opaque Pouch</h3>
-            <p class="text-xs text-slate-500">Check off finished products as you drop them in your bag.</p>
+            <h3 class="font-bold text-slate-900 text-sm">Add Empty Containers to Your Pouch</h3>
+            <p class="text-xs text-slate-500">Select any empty container type you are returning from the accepted list.</p>
           </div>
-          <span class="text-xs font-bold text-herbal-600 bg-herbal-50 px-2.5 py-1 rounded-lg" id="pouchCheckedCount">3 / 3 Containers Stowed</span>
+          <span class="text-xs font-bold text-herbal-600 bg-herbal-50 px-2.5 py-1 rounded-lg" id="pouchCheckedCount">3 / 3 Required Containers Added</span>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <label class="flex items-center space-x-3 p-3 rounded-xl border border-herbal-200 bg-herbal-50/50 cursor-pointer">
-            <input type="checkbox" checked onchange="togglePouchItem(this)" class="w-4 h-4 text-herbal-600 rounded">
-            <span class="text-xs font-bold text-slate-800">Minoxidil 60ml Dropper</span>
-          </label>
-          <label class="flex items-center space-x-3 p-3 rounded-xl border border-herbal-200 bg-herbal-50/50 cursor-pointer">
-            <input type="checkbox" checked onchange="togglePouchItem(this)" class="w-4 h-4 text-herbal-600 rounded">
-            <span class="text-xs font-bold text-slate-800">Biotin 60s Gummy Tub</span>
-          </label>
-          <label class="flex items-center space-x-3 p-3 rounded-xl border border-herbal-200 bg-herbal-50/50 cursor-pointer">
-            <input type="checkbox" checked onchange="togglePouchItem(this)" class="w-4 h-4 text-herbal-600 rounded">
-            <span class="text-xs font-bold text-slate-800">Ketoconazole 200ml Bottle</span>
-          </label>
+        <!-- Manual Dropdown Input Row -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+          <select id="acceptedEmptiesDropdown" class="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs text-slate-800">
+            <option value="Glass Dropper Bottle (Minoxidil / Hair Serums)">Glass Dropper Bottle (Minoxidil / Hair Serums)</option>
+            <option value="Pump Spray / Dispenser Bottle (Ketoconazole / Scalp Cleansers)">Pump Spray / Dispenser Bottle (Ketoconazole / Scalp Cleansers)</option>
+            <option value="Wide-Mouth Tub Jar (Biotin Hair Gummies)">Wide-Mouth Tub Jar (Biotin Hair Gummies)</option>
+            <option value="Medicine Tablet Container (DHT Blockers / Supplements)">Medicine Tablet Container (DHT Blockers / Supplements)</option>
+            <option value="Squeeze Tube (Face Wash / Beard Creams)">Squeeze Tube (Face Wash / Beard Creams)</option>
+          </select>
+          <button onclick="addEmptyContainerFromDropdown()" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition whitespace-nowrap">
+            <i class="fa-solid fa-plus mr-1"></i> Add to Pouch
+          </button>
         </div>
 
-        <!-- Verification Photo Upload -->
+        <!-- Currently Stowed Items List -->
+        <div class="space-y-2 pt-2" id="stowedContainersList">
+          <div class="flex items-center justify-between p-3 rounded-xl border border-herbal-200 bg-herbal-50/50 text-xs">
+            <span class="font-bold text-slate-800"><i class="fa-solid fa-prescription-bottle text-herbal-600 mr-2"></i>Glass Dropper Bottle (Minoxidil / Hair Serums)</span>
+            <button onclick="removePouchItem(this)" class="text-slate-400 hover:text-red-500"><i class="fa-solid fa-trash"></i></button>
+          </div>
+          <div class="flex items-center justify-between p-3 rounded-xl border border-herbal-200 bg-herbal-50/50 text-xs">
+            <span class="font-bold text-slate-800"><i class="fa-solid fa-box text-herbal-600 mr-2"></i>Wide-Mouth Tub Jar (Biotin Hair Gummies)</span>
+            <button onclick="removePouchItem(this)" class="text-slate-400 hover:text-red-500"><i class="fa-solid fa-trash"></i></button>
+          </div>
+          <div class="flex items-center justify-between p-3 rounded-xl border border-herbal-200 bg-herbal-50/50 text-xs">
+            <span class="font-bold text-slate-800"><i class="fa-solid fa-pump-soap text-herbal-600 mr-2"></i>Pump Spray / Dispenser Bottle (Ketoconazole / Scalp Cleansers)</span>
+            <button onclick="removePouchItem(this)" class="text-slate-400 hover:text-red-500"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>
+
+        <!-- Verification Photo Upload (Active once 3 bottles added) -->
         <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
           <div>
-            <h4 class="font-bold text-slate-900 text-xs">Digital Photo Verification of Sealed Pouch</h4>
-            <p class="text-[11px] text-slate-500">Take a photo of your sealed Green Pouch to unlock complimentary trial discovery products.</p>
+            <h4 class="font-bold text-slate-900 text-xs">Digital Verification Photo of Sealed Pouch</h4>
+            <p class="text-[11px] text-slate-500">Take a photo of your filled Green Pouch to unlock complimentary trial discovery products.</p>
           </div>
           <label for="pouchPhotoInput" class="w-full sm:w-auto bg-herbal-600 hover:bg-herbal-700 text-white font-bold text-xs px-4 py-2 rounded-xl transition shadow-xs cursor-pointer flex items-center justify-center space-x-2">
             <i class="fa-solid fa-camera"></i>
-            <span>Upload Photo of Pouch</span>
+            <span>Upload Pouch Photo</span>
           </label>
           <input type="file" id="pouchPhotoInput" accept="image/*" class="hidden" onchange="handlePouchPhotoUpload(event)">
         </div>
       </div>
 
-      <!-- Free Discovery Sample Selection (Products user is not currently using) -->
+      <!-- Free Discovery Sample Selection (Complimentary Products Outside Current Regimen) -->
       <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-5 shadow-xs space-y-4">
         <div class="border-b pb-3">
           <div class="flex items-center space-x-2">
             <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Pouch Handover Reward</span>
-            <span class="font-bold text-slate-900 text-sm">Select 1 Free Complimentary Discovery Gift</span>
+            <span class="font-bold text-slate-900 text-sm">Select 1 Free Complimentary Discovery Sample</span>
           </div>
-          <p class="text-xs text-slate-500 mt-0.5">Packed directly into your upcoming refill parcel when you hand over the empty pouch.</p>
+          <p class="text-xs text-slate-500 mt-0.5">Packed inside your next refill box when you hand over your sealed Green Pouch to the rider.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
           <!-- Sample 1 -->
-          <div onclick="selectRewardSample(this, 'Redensyl 3% Beard Growth Tonic (15ml)')" class="border-2 border-slate-200 hover:border-herbal-500 rounded-2xl p-4 cursor-pointer transition relative reward-card">
-            <span class="text-xs font-bold text-slate-900 block">Redensyl 3% Beard Tonic (15ml)</span>
+          <div onclick="selectRewardSample(this, 'Man Matters Redensyl 3% Beard Growth Tonic (15ml)')" class="border-2 border-slate-200 hover:border-herbal-500 rounded-2xl p-4 cursor-pointer transition relative reward-card">
+            <span class="text-xs font-bold text-slate-900 block">Man Matters Redensyl Beard Tonic (15ml)</span>
             <p class="text-[11px] text-slate-500 mt-1">Lightweight non-greasy facial follicle activator for patchy beard areas.</p>
             <span class="mt-3 inline-block text-[10px] font-bold text-herbal-600 bg-herbal-50 px-2 py-0.5 rounded">Free Sample • ₹0</span>
           </div>
 
           <!-- Sample 2 -->
-          <div onclick="selectRewardSample(this, 'Melatonin Sleep Dissolving Oral Strips (10s)')" class="border-2 border-slate-200 hover:border-herbal-500 rounded-2xl p-4 cursor-pointer transition relative reward-card">
+          <div onclick="selectRewardSample(this, 'Man Matters Melatonin Dissolving Sleep Strips (10s)')" class="border-2 border-slate-200 hover:border-herbal-500 rounded-2xl p-4 cursor-pointer transition relative reward-card">
             <span class="text-xs font-bold text-slate-900 block">Melatonin Sleep Strips (10 Strips)</span>
-            <p class="text-[11px] text-slate-500 mt-1">Fast-dissolving non-habit forming peppermint strips for deep REM sleep.</p>
+            <p class="text-[11px] text-slate-500 mt-1">Fast-dissolving non-habit forming peppermint strips for deep sleep.</p>
             <span class="mt-3 inline-block text-[10px] font-bold text-herbal-600 bg-herbal-50 px-2 py-0.5 rounded">Free Sample • ₹0</span>
           </div>
 
           <!-- Sample 3 -->
-          <div onclick="selectRewardSample(this, 'Salicylic Acid Oil-Control Face Cleanser (50ml)')" class="border-2 border-slate-200 hover:border-herbal-500 rounded-2xl p-4 cursor-pointer transition relative reward-card">
-            <span class="text-xs font-bold text-slate-900 block">Oil-Control Face Cleanser (50ml)</span>
-            <p class="text-[11px] text-slate-500 mt-1">Exfoliating Salicylic & Green Tea face wash for clear, matte skin.</p>
+          <div onclick="selectRewardSample(this, 'Man Matters Salicylic Acid Oil-Control Face Cleanser (50ml)')" class="border-2 border-slate-200 hover:border-herbal-500 rounded-2xl p-4 cursor-pointer transition relative reward-card">
+            <span class="text-xs font-bold text-slate-900 block">Salicylic Oil-Control Cleanser (50ml)</span>
+            <p class="text-[11px] text-slate-500 mt-1">Exfoliating Salicylic & Green Tea face wash for clear, oil-free skin.</p>
             <span class="mt-3 inline-block text-[10px] font-bold text-herbal-600 bg-herbal-50 px-2 py-0.5 rounded">Free Sample • ₹0</span>
           </div>
         </div>
@@ -1021,7 +1119,7 @@
         <span class="font-bold text-slate-700">Man Matters Medical Regimen Platform</span>
       </div>
       <p class="text-[11px] text-center md:text-left text-slate-400 max-w-xl">
-        Medical Notice: Minoxidil 5% and Saw Palmetto are prescription-grade compounds. If unexpected skin redness occurs, discontinue application and speak directly with your assigned physician.
+        Medical Notice: Man Matters Minoxidil 5% and DHT Blocker are prescription-grade compounds. If unexpected skin redness occurs, discontinue application and speak directly with your assigned physician.
       </p>
       <div class="text-[11px] text-slate-400">
         Placement Submission Demo • Mosaic Wellness
@@ -1117,7 +1215,7 @@
     </div>
   </div>
 
-  <!-- MODAL 2: USER PROFILE & MEDICAL INTAKE DETAILS -->
+  <!-- MODAL 2: USER PROFILE & PERSONAL DETAILS -->
   <div id="profileModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center hidden p-4">
     <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-oat-border space-y-4">
       <div class="flex items-center justify-between border-b pb-3">
@@ -1173,7 +1271,7 @@
       </div>
 
       <div class="p-3.5 bg-slate-50 rounded-2xl border border-slate-200 text-xs space-y-1">
-        <div class="font-bold text-slate-900" id="reorderProductName">Minoxidil 5% Solution (60ml)</div>
+        <div class="font-bold text-slate-900" id="reorderProductName">Man Matters Minoxidil 5% Solution (60ml)</div>
         <p class="text-slate-500">Scheduled 48-Hour Rapid Delivery to Bandra West, Mumbai</p>
         <div class="font-black text-slate-900 text-sm pt-1" id="reorderProductPrice">₹699 (Free Express Courier)</div>
       </div>
@@ -1219,7 +1317,7 @@
   </div>
 
   <!-- ======================================================== -->
-  <!-- SCRIPT ENGINE: DATA, LOGIC & AUDIO                       -->
+  <!-- SCRIPT ENGINE: ROBUST PERSISTENCE, REVERSIBLE DOSES, & UI -->
   <!-- ======================================================== -->
   <script>
     // 1. FIREBASE CREDENTIALS
@@ -1244,7 +1342,7 @@
         isFirebaseConfigured = true;
       }
     } catch (e) {
-      console.warn("Using LocalStorage state engine.");
+      console.warn("Using LocalStorage persistence mode.");
     }
 
     // 2. AUDIO SYNTHESIZER
@@ -1263,7 +1361,7 @@
       osc.stop(audioCtx.currentTime + 0.4);
     }
 
-    // 3. REGIMEN STATE
+    // 3. REGIMEN STATE & REVERSIBLE DOSE TRACKING
     let minoxRemaining = 7.0;
     let biotinRemaining = 42;
     let shampooRemaining = 135.0;
@@ -1273,6 +1371,14 @@
     let userName = "Rahul Sharma";
     let savedPhoneNumber = localStorage.getItem('mm_user_phone') || "";
     let reminderOffset = localStorage.getItem('mm_reminder_offset') || "30";
+
+    // Track state of each dose so it can be un-ticked if clicked accidentally
+    let doseState = {
+      biotin: true,
+      shampoo: false,
+      minoxidil: false,
+      dht: true
+    };
 
     // 4. AUTHENTICATION & PROFILE
     function loginWithGoogle() {
@@ -1348,10 +1454,12 @@
           streakDays = d.streakDays ?? streakDays;
           dosesLoggedToday = d.dosesLoggedToday ?? dosesLoggedToday;
           userName = d.userName ?? userName;
+          if (d.doseState) doseState = d.doseState;
           document.getElementById('headerUserName').innerText = userName.split(' ')[0];
         } catch(e) {}
       }
       updateAllVisuals();
+      refreshButtonStates();
     }
 
     function saveUserData() {
@@ -1363,6 +1471,7 @@
         streakDays: streakDays,
         dosesLoggedToday: dosesLoggedToday,
         userName: userName,
+        doseState: doseState,
         phone: savedPhoneNumber,
         lastUpdated: new Date().toISOString()
       };
@@ -1410,13 +1519,13 @@
         localStorage.setItem('mm_user_phone', cleanPhone);
       }
       const targetPhone = "91" + cleanPhone;
-      const message = encodeURIComponent(`Hey Man Matters Care Team! I'm on Day 42 of my Minoxidil & Biotin protocol. My 1.0 ml application is completed for tonight. Please sync my 18-day adherence streak!`);
+      const message = encodeURIComponent(`Hey Man Matters Care Team! I'm on Day 42 of my Minoxidil & Biotin protocol. My 1.0 ml dose is completed for tonight. Please sync my 18-day adherence streak!`);
       window.open(`https://api.whatsapp.com/send?phone=${targetPhone}&text=${message}`, '_blank');
     }
     function whatsappLogMinoxidil() {
       playChime(783.99);
       document.getElementById('whatsappReplyBubble').classList.remove('hidden');
-      logDose('minoxidil', 1, 'ml');
+      if (!doseState.minoxidil) toggleDose('minoxidil', 1, 'ml');
       setTimeout(() => toggleWhatsAppModal(false), 1200);
     }
 
@@ -1441,81 +1550,136 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // 8. DOSE LOGGING & VISUAL TELEMETRY
-    function logDose(product, amount, unit) {
+    // 8. REVERSIBLE DOSE LOGGING (TOGGLE ON/OFF FOR ACCIDENTAL CLICKS)
+    function toggleDose(product, amount, unit) {
       playChime(659.25);
+      
+      // Toggle state
+      doseState[product] = !doseState[product];
+
       if (product === 'minoxidil') {
-        minoxRemaining = Math.max(0, (minoxRemaining - amount)).toFixed(1);
-        const btn = document.getElementById('btn-ov-minoxidil');
-        if (btn) {
-          btn.innerHTML = `<i class="fa-solid fa-check"></i> Applied 1.0ml`;
-          btn.className = "w-full sm:w-auto bg-herbal-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs";
+        if (doseState.minoxidil) {
+          minoxRemaining = Math.max(0, (minoxRemaining - amount)).toFixed(1);
+        } else {
+          minoxRemaining = Math.min(60, (parseFloat(minoxRemaining) + amount)).toFixed(1);
         }
       } else if (product === 'biotin') {
-        biotinRemaining = Math.max(0, biotinRemaining - amount);
-        const btn = document.getElementById('btn-ov-biotin');
-        if (btn) {
-          btn.innerText = 'Completed ✓';
-          btn.className = "w-full sm:w-auto bg-slate-100 text-slate-400 font-bold text-xs px-3.5 py-2 rounded-xl transition";
+        if (doseState.biotin) {
+          biotinRemaining = Math.max(0, biotinRemaining - amount);
+        } else {
+          biotinRemaining = Math.min(60, biotinRemaining + amount);
         }
       } else if (product === 'shampoo') {
-        shampooRemaining = Math.max(0, (shampooRemaining - amount)).toFixed(1);
-        const btn = document.getElementById('btn-ov-shampoo');
-        if (btn) {
-          btn.innerText = 'Applied in Shower ✓';
-          btn.className = "w-full sm:w-auto bg-herbal-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition";
+        if (doseState.shampoo) {
+          shampooRemaining = Math.max(0, (shampooRemaining - amount)).toFixed(1);
+        } else {
+          shampooRemaining = Math.min(200, (parseFloat(shampooRemaining) + amount)).toFixed(1);
         }
       } else if (product === 'dht') {
-        dhtRemaining = Math.max(0, dhtRemaining - amount);
-        const btn = document.getElementById('btn-ov-dht');
-        if (btn) {
-          btn.innerText = 'Completed ✓';
-          btn.className = "w-full sm:w-auto bg-slate-100 text-slate-400 font-bold text-xs px-3.5 py-2 rounded-xl transition";
+        if (doseState.dht) {
+          dhtRemaining = Math.max(0, dhtRemaining - amount);
+        } else {
+          dhtRemaining = Math.min(60, dhtRemaining + amount);
         }
       }
-      dosesLoggedToday = 3;
-      document.getElementById('ovCompletedCount').innerText = '3 / 3';
-      document.getElementById('ovProgressBar').style.width = '100%';
+
+      // Re-calculate doses logged today
+      let activeCount = Object.values(doseState).filter(Boolean).length;
+      dosesLoggedToday = Math.min(3, activeCount);
+      document.getElementById('ovCompletedCount').innerText = `${dosesLoggedToday} / 3`;
+      document.getElementById('ovProgressBar').style.width = `${(dosesLoggedToday / 3) * 100}%`;
+
+      refreshButtonStates();
       updateAllVisuals();
       saveUserData();
     }
 
+    function refreshButtonStates() {
+      // Biotin
+      const btnBio = document.getElementById('btn-ov-biotin');
+      if (btnBio) {
+        if (doseState.biotin) {
+          btnBio.innerHTML = `<span>Completed ✓ (Tap to Undo)</span>`;
+          btnBio.className = "w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1";
+        } else {
+          btnBio.innerHTML = `<i class="fa-solid fa-check"></i><span>Take Dose</span>`;
+          btnBio.className = "w-full sm:w-auto bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs";
+        }
+      }
+
+      // Shampoo
+      const btnSham = document.getElementById('btn-ov-shampoo');
+      if (btnSham) {
+        if (doseState.shampoo) {
+          btnSham.innerHTML = `<span>Applied ✓ (Tap to Undo)</span>`;
+          btnSham.className = "w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1";
+        } else {
+          btnSham.innerHTML = `<span>Not Today</span>`;
+          btnSham.className = "w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5";
+        }
+      }
+
+      // Minoxidil
+      const btnMinox = document.getElementById('btn-ov-minoxidil');
+      if (btnMinox) {
+        if (doseState.minoxidil) {
+          btnMinox.innerHTML = `<span>Applied 1.0ml ✓ (Undo)</span>`;
+          btnMinox.className = "w-full sm:w-auto bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1 shadow-xs";
+        } else {
+          btnMinox.innerHTML = `<i class="fa-solid fa-droplet"></i><span>Log 1.0 ml</span>`;
+          btnMinox.className = "w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs";
+        }
+      }
+
+      // DHT Blocker
+      const btnDht = document.getElementById('btn-ov-dht');
+      if (btnDht) {
+        if (doseState.dht) {
+          btnDht.innerHTML = `<span>Taken ✓ (Tap to Undo)</span>`;
+          btnDht.className = "w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1";
+        } else {
+          btnDht.innerHTML = `<i class="fa-solid fa-check"></i><span>Take Dose</span>`;
+          btnDht.className = "w-full sm:w-auto bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center justify-center space-x-1.5 shadow-xs";
+        }
+      }
+    }
+
     function updateAllVisuals() {
-      // Numbers in Header & Overview
+      // Header & Hero Numbers
       document.getElementById('headerStreakCount').innerText = streakDays;
       document.getElementById('heroStreakCount').innerText = streakDays;
       document.getElementById('ovStreakDays').innerText = streakDays;
       document.getElementById('bannerRemainingMl').innerText = minoxRemaining;
 
-      // Overview Texts
+      // Overview Tab Quantities
       document.getElementById('ovTextMinox').innerText = `${minoxRemaining} / 60 ml`;
       document.getElementById('ovTextBiotin').innerText = `${biotinRemaining} / 60 gummies`;
       document.getElementById('ovTextShampoo').innerText = `${shampooRemaining} / 200 ml`;
-      document.getElementById('ovTextDht').innerText = `${dhtRemaining} / 60 caps`;
+      document.getElementById('ovTextDht').innerText = `${dhtRemaining} / 60 tablets`;
 
-      // Live Dispensary Texts
+      // Live Dispensary Tab Quantities
       document.getElementById('dispMinoxMl').innerText = minoxRemaining;
       document.getElementById('dispBiotinQty').innerText = biotinRemaining;
       document.getElementById('dispShampooMl').innerText = shampooRemaining;
       document.getElementById('dispDhtQty').innerText = dhtRemaining;
 
-      // Live Percentages
+      // Fill Percentages
       const pctMinox = Math.max(5, (minoxRemaining / 60) * 100);
       const pctBiotin = Math.max(5, (biotinRemaining / 60) * 100);
       const pctShampoo = Math.max(5, (shampooRemaining / 200) * 100);
       const pctDht = Math.max(5, (dhtRemaining / 60) * 100);
 
-      // Mini Visual Heights in Overview
+      // Mini Graphic Visuals in Overview
       document.getElementById('ovFigMinox').style.height = `${pctMinox}%`;
       document.getElementById('ovFigBiotin').style.height = `${pctBiotin}%`;
       document.getElementById('ovFigShampoo').style.height = `${pctShampoo}%`;
       document.getElementById('ovFigDht').style.height = `${pctDht}%`;
 
-      // Big Visual Heights in Live Dispensary
+      // Large Visual Packaging in Live Dispensary
       document.getElementById('bigMinoxLiquid').style.height = `${pctMinox}%`;
-      document.getElementById('bigBiotinLiquid').style.height = `${pctBiotin}%`;
+      document.getElementById('gummyClusterContainer').style.height = `${pctBiotin}%`;
       document.getElementById('bigShampooLiquid').style.height = `${pctShampoo}%`;
-      document.getElementById('bigDhtLiquid').style.height = `${pctDht}%`;
+      document.getElementById('tabletClusterContainer').style.height = `${pctDht}%`;
 
       document.getElementById('dispBarMinox').style.width = `${pctMinox}%`;
       document.getElementById('dispBarBiotin').style.width = `${pctBiotin}%`;
@@ -1528,9 +1692,11 @@
       biotinRemaining = 60;
       shampooRemaining = 200.0;
       dhtRemaining = 60;
+      doseState = { biotin: false, shampoo: false, minoxidil: false, dht: false };
+      refreshButtonStates();
       updateAllVisuals();
       saveUserData();
-      alert('Dispensary refreshed to 100% full capacity.');
+      alert('Dispensary refreshed to 100% capacity.');
     }
 
     // 9. SCALP PHOTO UPLOAD & AI REVIEW
@@ -1543,19 +1709,42 @@
       card.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // 10. ECO-POUCH STOWING & SAMPLE SELECTION
-    function togglePouchItem(checkbox) {
-      const allCheckboxes = document.querySelectorAll('#view-pouch input[type="checkbox"]:checked');
-      const count = allCheckboxes.length;
-      document.getElementById('pouchCheckedCount').innerText = `${count} / 3 Containers Stowed`;
+    // 10. ECO-POUCH MANUAL ADDER & VERIFICATION
+    function addEmptyContainerFromDropdown() {
+      const dropdown = document.getElementById('acceptedEmptiesDropdown');
+      const val = dropdown.value;
+      const list = document.getElementById('stowedContainersList');
+      
+      const newRow = document.createElement('div');
+      newRow.className = "flex items-center justify-between p-3 rounded-xl border border-herbal-200 bg-herbal-50/50 text-xs";
+      newRow.innerHTML = `
+        <span class="font-bold text-slate-800"><i class="fa-solid fa-box text-herbal-600 mr-2"></i>${val}</span>
+        <button onclick="removePouchItem(this)" class="text-slate-400 hover:text-red-500"><i class="fa-solid fa-trash"></i></button>
+      `;
+      list.appendChild(newRow);
+      playChime(550);
+      updatePouchCounts();
+    }
+
+    function removePouchItem(btn) {
+      btn.closest('div').remove();
+      updatePouchCounts();
+    }
+
+    function updatePouchCounts() {
+      const count = document.querySelectorAll('#stowedContainersList > div').length;
+      document.getElementById('pouchCheckedCount').innerText = `${count} / 3 Required Containers Added`;
+      document.getElementById('recycledCountText').innerText = `${count} Containers`;
       document.getElementById('ovPouchCount').innerText = `${count} / 3`;
     }
+
     function handlePouchPhotoUpload(e) {
       if (e.target.files[0]) {
         playChime(880);
-        alert('Digital Audit Verified: 3 empty containers validated inside Green Eco-Pouch! Free discovery sample unlocked below.');
+        alert('Digital Verification Passed: Empty containers recognized inside sealed Green Pouch! Select your free trial discovery sample below.');
       }
     }
+
     function selectRewardSample(card, title) {
       playChime(659.25);
       document.querySelectorAll('.reward-card').forEach(c => {
@@ -1582,32 +1771,17 @@
       document.getElementById('lowStockBanner').classList.add('hidden');
       closeReorderModal();
       saveUserData();
-      alert('Refill Confirmed! Minoxidil 60ml replenished. Rider will collect your Green Eco-Pouch.');
+      alert('Refill Confirmed! Man Matters Minoxidil 60ml replenished. Rider will collect your Green Eco-Pouch.');
     }
 
     function openSheddingModal() { document.getElementById('sheddingModal').classList.remove('hidden'); }
     function closeSheddingModal() { document.getElementById('sheddingModal').classList.add('hidden'); }
     function openDoctorModal() { alert('Telehealth Portal: Routing to assigned physician.'); }
     function openCustomHabitModal() {
-      const name = prompt("Enter product or habit name to add to routine:", "Rosemary Scalp Serum");
+      const name = prompt("Enter product name to add to routine:", "Man Matters Rosemary Anti-Hairfall Oil");
       if (name) {
         const time = prompt("Enter scheduled time (e.g. 07:00 AM or 11:00 PM):", "08:00 AM");
-        const list = document.getElementById('routineCardsList');
-        list.innerHTML += `
-          <div class="bg-white border border-oat-border rounded-2xl p-4 shadow-xs space-y-2">
-            <div class="flex items-center justify-between border-b pb-2">
-              <h3 class="font-bold text-slate-900 text-sm">${name}</h3>
-              <span class="text-xs bg-slate-100 px-2 py-0.5 rounded font-semibold">${time}</span>
-            </div>
-            <p class="text-xs text-slate-600">Apply as instructed by doctor. Routine item active.</p>
-          </div>
-        `;
-        alert(`Added ${name} to your daily regimen!`);
-      }
-    }
-    function deleteRegimenItem(btn) {
-      if (confirm("Remove this product from your daily protocol?")) {
-        btn.closest('.bg-white').remove();
+        alert(`Added ${name} (${time}) to your regimen protocol!`);
       }
     }
 
@@ -1730,7 +1904,7 @@
       initCalendar();
       initPhoneSettings();
       loadUserData('guest');
-      // Countdown Timer
+      // Adherence countdown timer to midnight
       setInterval(() => {
         const now = new Date();
         const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
