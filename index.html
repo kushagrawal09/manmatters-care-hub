@@ -56,62 +56,62 @@
     .liquid-wave { transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
   </style>
 </head>
-<body class="min-h-screen flex flex-col font-sans antialiased text-slate-800">
+<body class="min-h-screen flex flex-col font-sans antialiased text-slate-800 overflow-x-hidden">
 
   <!-- TOP CLINICAL NAVIGATION & AUTHENTICATION BAR -->
   <header class="bg-white border-b border-oat-border sticky top-0 z-40 shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-2">
         
         <!-- Brand & Protocol Label -->
-        <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-bold text-lg tracking-wider">
+        <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white font-bold text-sm sm:text-lg tracking-wider">
             M
           </div>
           <div>
-            <div class="flex items-center space-x-2">
-              <span class="font-bold text-lg tracking-tight text-slate-900">MAN MATTERS</span>
-              <span class="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full border border-slate-200">Clinical Hub</span>
+            <div class="flex items-center space-x-1.5">
+              <span class="font-bold text-sm sm:text-base tracking-tight text-slate-900">MAN MATTERS</span>
+              <span class="text-[9px] font-bold uppercase tracking-wider bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded border border-slate-200">Hub</span>
             </div>
-            <p class="text-xs text-slate-500 font-medium">Hair Regrowth & Density Protocol • Day 42</p>
+            <p class="text-[10px] text-slate-500 font-medium hidden sm:block">Regimen • Day 42</p>
           </div>
         </div>
 
         <!-- Telemetry Badges, WhatsApp Bot & Google Sign-In -->
-        <div class="flex items-center space-x-2 sm:space-x-3">
+        <div class="flex items-center space-x-1.5 sm:space-x-3 shrink-0">
           <!-- 1-Grace Day Streak Pill -->
-          <div class="flex items-center space-x-2 bg-herbal-50 border border-herbal-100 px-3 py-1.5 rounded-full">
-            <span class="flex h-2 w-2 relative">
+          <div class="flex items-center space-x-1 sm:space-x-2 bg-herbal-50 border border-herbal-100 px-2 sm:px-3 py-1 rounded-full">
+            <span class="flex h-1.5 w-1.5 sm:h-2 sm:w-2 relative">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-herbal-500 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-herbal-600"></span>
+              <span class="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-herbal-600"></span>
             </span>
-            <span class="text-xs font-bold text-herbal-600" id="headerStreakText">18-Day Streak</span>
-            <span class="text-[10px] bg-white border border-herbal-100 text-herbal-600 px-1.5 py-0.5 rounded-md font-semibold hidden md:inline-block">
-              <i class="fa-solid fa-shield-halved text-[9px] mr-1"></i>1 Grace Shield Active
+            <span class="text-[11px] sm:text-xs font-bold text-herbal-600" id="headerStreakText">18d Streak</span>
+            <span class="text-[9px] bg-white border border-herbal-100 text-herbal-600 px-1.5 py-0.2 rounded font-semibold hidden md:inline-block">
+              1 Shield Active
             </span>
           </div>
 
           <!-- Doctor Telehealth CTA -->
-          <button onclick="openDoctorModal()" class="hidden lg:flex items-center space-x-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-3 py-2 rounded-xl transition-all shadow-xs">
+          <button onclick="openDoctorModal()" class="hidden lg:flex items-center space-x-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-3 py-1.5 rounded-xl transition-all shadow-xs">
             <i class="fa-solid fa-user-doctor text-emerald-400"></i>
             <span>Consult Doctor</span>
           </button>
 
           <!-- WhatsApp Bot Launcher Button -->
-          <button onclick="toggleWhatsAppModal(true)" class="flex items-center space-x-1.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] border border-[#25D366]/30 px-3 py-1.5 rounded-xl text-xs font-bold transition">
+          <button onclick="toggleWhatsAppModal(true)" class="flex items-center space-x-1 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#128C7E] border border-[#25D366]/30 px-2 sm:px-3 py-1 rounded-xl text-xs font-bold transition">
             <i class="fa-brands fa-whatsapp text-sm"></i>
-            <span class="hidden sm:inline">WhatsApp Bot</span>
+            <span class="hidden md:inline">WhatsApp Bot</span>
           </button>
 
           <!-- Google Account Sign-In / User Profile Button -->
-          <div id="authContainer">
-            <button onclick="loginWithGoogle()" id="btnGoogleLogin" class="flex items-center space-x-1.5 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 px-3 py-1.5 rounded-xl text-xs font-bold transition shadow-xs">
+          <div id="authContainer" class="shrink-0">
+            <button onclick="loginWithGoogle()" id="btnGoogleLogin" class="flex items-center space-x-1 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 px-2 sm:px-3 py-1 rounded-xl text-xs font-bold transition shadow-xs">
               <i class="fa-brands fa-google text-red-500"></i>
-              <span class="hidden sm:inline">Sign In with Google</span>
+              <span class="hidden sm:inline">Sign In</span>
             </button>
-            <div id="userProfileBadge" class="hidden flex items-center space-x-2 bg-slate-100 border border-slate-200 px-2.5 py-1 rounded-xl">
-              <img id="userAvatar" src="" alt="User" class="w-6 h-6 rounded-full border border-slate-300">
-              <span id="userName" class="text-xs font-bold text-slate-800 max-w-[90px] truncate">Rahul</span>
+            <div id="userProfileBadge" class="hidden flex items-center space-x-1.5 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-xl">
+              <img id="userAvatar" src="" alt="User" class="w-5 h-5 rounded-full border border-slate-300">
+              <span id="userName" class="text-[11px] font-bold text-slate-800 max-w-[65px] truncate">User</span>
               <button onclick="logoutGoogle()" title="Sign Out" class="text-slate-400 hover:text-slate-700 text-xs pl-1">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
               </button>
@@ -122,67 +122,67 @@
       </div>
 
       <!-- Single-Line Primary Navigation -->
-      <nav class="flex space-x-1 sm:space-x-2 overflow-x-auto hide-scrollbar py-2 border-t border-oat-border text-xs font-semibold">
-        <button onclick="switchTab('overview')" id="nav-overview" class="tab-btn px-3 py-1.5 rounded-lg text-slate-900 bg-slate-100 font-bold transition">
-          <i class="fa-solid fa-table-columns mr-1.5"></i>All at a Glance
+      <nav class="flex space-x-1 overflow-x-auto hide-scrollbar py-2 border-t border-oat-border text-xs font-semibold whitespace-nowrap">
+        <button onclick="switchTab('overview')" id="nav-overview" class="tab-btn px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-900 bg-slate-100 font-bold transition shrink-0">
+          <i class="fa-solid fa-table-columns mr-1"></i>All at a Glance
         </button>
-        <button onclick="switchTab('routine')" id="nav-routine" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition">
-          <i class="fa-solid fa-clock-rotate-left mr-1.5"></i>Prescribed Regimen (AM/PM)
+        <button onclick="switchTab('routine')" id="nav-routine" class="tab-btn px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
+          <i class="fa-solid fa-clock-rotate-left mr-1"></i>Prescribed Regimen (AM/PM)
         </button>
-        <button onclick="switchTab('calendar')" id="nav-calendar" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition">
-          <i class="fa-solid fa-calendar-check mr-1.5"></i>Adherence Calendar
+        <button onclick="switchTab('calendar')" id="nav-calendar" class="tab-btn px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
+          <i class="fa-solid fa-calendar-check mr-1"></i>Adherence Calendar
         </button>
-        <button onclick="switchTab('journal')" id="nav-journal" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition">
-          <i class="fa-solid fa-camera mr-1.5"></i>15-Day Scalp Journal
+        <button onclick="switchTab('journal')" id="nav-journal" class="tab-btn px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
+          <i class="fa-solid fa-camera mr-1"></i>15-Day Scalp Journal
         </button>
-        <button onclick="switchTab('pouch')" id="nav-pouch" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition">
-          <i class="fa-solid fa-box-open mr-1.5 text-herbal-600"></i>Green Eco-Pouch
+        <button onclick="switchTab('pouch')" id="nav-pouch" class="tab-btn px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
+          <i class="fa-solid fa-box-open mr-1 text-herbal-600"></i>Green Eco-Pouch
         </button>
-        <button onclick="switchTab('ai')" id="nav-ai" class="tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition">
-          <i class="fa-solid fa-comment-medical mr-1.5 text-blue-600"></i>Clinical AI Coach
+        <button onclick="switchTab('ai')" id="nav-ai" class="tab-btn px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition shrink-0">
+          <i class="fa-solid fa-comment-medical mr-1 text-blue-600"></i>Clinical AI Coach
         </button>
       </nav>
     </div>
   </header>
 
   <!-- MAIN VIEWPORT CONTAINER -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full">
+  <main class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 flex-1 w-full min-w-0">
 
     <!-- REASSURING SHEDDING WINDOW ALERT (WEEKS 3 TO 8) -->
-    <div class="mb-6 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 sm:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xs">
-      <div class="flex items-start space-x-3.5">
-        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-200 flex items-center justify-center shrink-0 mt-0.5">
-          <i class="fa-solid fa-shield-cat text-amber-700 text-lg"></i>
+    <div class="mb-4 sm:mb-6 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-3.5 sm:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 shadow-xs">
+      <div class="flex items-start space-x-3 min-w-0">
+        <div class="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-200 flex items-center justify-center shrink-0 mt-0.5">
+          <i class="fa-solid fa-shield-cat text-amber-700 text-sm"></i>
         </div>
-        <div>
-          <div class="flex items-center space-x-2">
-            <span class="font-bold text-slate-900 text-sm">Noticeable Shower Shedding? (Day 42 • Week 6)</span>
-            <span class="bg-amber-200/60 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Normal Transition Phase</span>
+        <div class="min-w-0">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="font-bold text-slate-900 text-xs sm:text-sm">Noticeable Shower Shedding? (Day 42 • Week 6)</span>
+            <span class="bg-amber-200/60 text-amber-900 text-[9px] font-bold px-1.5 py-0.2 rounded-full uppercase">Normal Transition Phase</span>
           </div>
-          <p class="text-xs text-slate-600 mt-1 max-w-3xl leading-relaxed">
+          <p class="text-[11px] sm:text-xs text-slate-600 mt-1 leading-relaxed">
             Around weeks 3 to 8, weaker, resting hairs detach so fresh, thicker roots can sprout underneath. This initial shedding is clinical proof the follicles are actively responding to the formula.
           </p>
         </div>
       </div>
-      <button onclick="openSheddingModal()" class="shrink-0 bg-white hover:bg-amber-50 text-amber-900 border border-amber-300 text-xs font-semibold px-4 py-2 rounded-xl transition shadow-xs">
+      <button onclick="openSheddingModal()" class="w-full md:w-auto shrink-0 bg-white hover:bg-amber-50 text-amber-900 border border-amber-300 text-xs font-semibold px-3 py-2 rounded-xl transition shadow-xs text-center">
         <i class="fa-solid fa-circle-info mr-1.5"></i>Why Shedding Happens (2-Min Guide)
       </button>
     </div>
 
     <!-- 1-TAP REORDER REFILL NOTIFICATION (LOW STOCK ALERT) -->
-    <div id="lowStockBanner" class="mb-6 bg-gradient-to-r from-terracotta-100/70 to-rose-50 border border-terracotta-500/30 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs">
-      <div class="flex items-center space-x-3">
-        <div class="w-9 h-9 rounded-xl bg-terracotta-500/20 text-terracotta-600 flex items-center justify-center shrink-0 font-bold">
+    <div id="lowStockBanner" class="mb-4 sm:mb-6 bg-gradient-to-r from-terracotta-100/70 to-rose-50 border border-terracotta-500/30 rounded-2xl p-3.5 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs">
+      <div class="flex items-center space-x-3 min-w-0">
+        <div class="w-8 h-8 rounded-xl bg-terracotta-500/20 text-terracotta-600 flex items-center justify-center shrink-0 font-bold text-sm">
           <i class="fa-solid fa-droplet-slash"></i>
         </div>
-        <div>
-          <div class="text-xs font-bold text-slate-900 flex items-center space-x-2">
-            <span>Low Regimen Supply Alert: Minoxidil 5% has <span id="bannerRemainingMl">7.0</span> ml remaining (~7 days)</span>
+        <div class="min-w-0">
+          <div class="text-xs font-bold text-slate-900 truncate">
+            Low Regimen Supply Alert: Minoxidil 5% has <span id="bannerRemainingMl">7.0</span> ml remaining (~7 days)
           </div>
           <p class="text-[11px] text-slate-600 mt-0.5">Avoid routine gaps. Order now to hand over your filled Green Pouch to the rider during delivery.</p>
         </div>
       </div>
-      <button onclick="openReorderModal('Minoxidil 5% Solution (60ml)', 699)" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs px-4 py-2 rounded-xl transition shadow-xs whitespace-nowrap">
+      <button onclick="openReorderModal('Minoxidil 5% Solution (60ml)', 699)" class="w-full sm:w-auto bg-terracotta-500 hover:bg-terracotta-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition shadow-xs whitespace-nowrap shrink-0 text-center">
         <i class="fa-solid fa-bolt mr-1.5"></i>1-Tap Reorder Refill • ₹699
       </button>
     </div>
@@ -190,32 +190,32 @@
     <!-- ========================================== -->
     <!-- TAB 1: ALL TOPICS AT A GLANCE (OVERVIEW)   -->
     <!-- ========================================== -->
-    <div id="view-overview" class="space-y-6">
+    <div id="view-overview" class="space-y-4 sm:space-y-6">
       
       <!-- Key Telemetry Cards Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4">
         <!-- Streak Card -->
-        <div class="bg-white p-4 rounded-2xl border border-oat-border shadow-xs">
-          <div class="text-xs text-slate-500 font-semibold flex items-center justify-between">
+        <div class="bg-white p-3 sm:p-4 rounded-2xl border border-oat-border shadow-xs">
+          <div class="text-[11px] sm:text-xs text-slate-500 font-semibold flex items-center justify-between">
             <span>Active Adherence</span>
             <i class="fa-solid fa-fire text-amber-500"></i>
           </div>
-          <div class="mt-2 flex items-baseline space-x-2">
-            <span class="text-2xl font-black text-slate-900" id="ovStreakDays">18</span>
-            <span class="text-xs text-slate-500 font-bold">Days in Routine</span>
+          <div class="mt-1 flex items-baseline space-x-1">
+            <span class="text-xl sm:text-2xl font-black text-slate-900" id="ovStreakDays">18</span>
+            <span class="text-[10px] sm:text-xs text-slate-500 font-bold">Days in Routine</span>
           </div>
-          <p class="text-[11px] text-herbal-600 font-medium mt-1">1 Grace Day Used • Shield Ready</p>
+          <p class="text-[10px] text-herbal-600 font-medium mt-1 truncate">1 Grace Day Used • Shield Ready</p>
         </div>
 
         <!-- Today's Regimen Progress -->
-        <div class="bg-white p-4 rounded-2xl border border-oat-border shadow-xs">
-          <div class="text-xs text-slate-500 font-semibold flex items-center justify-between">
+        <div class="bg-white p-3 sm:p-4 rounded-2xl border border-oat-border shadow-xs">
+          <div class="text-[11px] sm:text-xs text-slate-500 font-semibold flex items-center justify-between">
             <span>Today's Protocol</span>
             <i class="fa-solid fa-list-check text-blue-500"></i>
           </div>
-          <div class="mt-2 flex items-baseline space-x-2">
-            <span class="text-2xl font-black text-slate-900" id="ovCompletedCount">2 / 3</span>
-            <span class="text-xs text-slate-500 font-bold">Doses Logged</span>
+          <div class="mt-1 flex items-baseline space-x-1">
+            <span class="text-xl sm:text-2xl font-black text-slate-900" id="ovCompletedCount">2 / 3</span>
+            <span class="text-[10px] sm:text-xs text-slate-500 font-bold">Doses Logged</span>
           </div>
           <div class="w-full bg-slate-100 rounded-full h-1.5 mt-2 overflow-hidden">
             <div id="ovProgressBar" class="bg-herbal-500 h-1.5 rounded-full transition-all" style="width: 66%"></div>
@@ -223,91 +223,91 @@
         </div>
 
         <!-- 15-Day Milestone Status -->
-        <div class="bg-white p-4 rounded-2xl border border-oat-border shadow-xs">
-          <div class="text-xs text-slate-500 font-semibold flex items-center justify-between">
-            <span>Scalp Photobiological Due</span>
+        <div class="bg-white p-3 sm:p-4 rounded-2xl border border-oat-border shadow-xs">
+          <div class="text-[11px] sm:text-xs text-slate-500 font-semibold flex items-center justify-between">
+            <span>Scalp Photobiological</span>
             <i class="fa-solid fa-camera-retro text-purple-500"></i>
           </div>
-          <div class="mt-2 flex items-baseline space-x-2">
-            <span class="text-2xl font-black text-slate-900">Day 45</span>
-            <span class="text-xs text-purple-600 font-bold">Due in 3 Days</span>
+          <div class="mt-1 flex items-baseline space-x-1">
+            <span class="text-xl sm:text-2xl font-black text-slate-900">Day 45</span>
+            <span class="text-[10px] text-purple-600 font-bold truncate">Due in 3 Days</span>
           </div>
-          <p class="text-[11px] text-slate-500 mt-1">Next check: 19 Oct 2026</p>
+          <p class="text-[10px] text-slate-500 mt-1 truncate">Next check: 19 Oct 2026</p>
         </div>
 
         <!-- Green Eco-Pouch Status -->
-        <div class="bg-white p-4 rounded-2xl border border-oat-border shadow-xs">
-          <div class="text-xs text-slate-500 font-semibold flex items-center justify-between">
+        <div class="bg-white p-3 sm:p-4 rounded-2xl border border-oat-border shadow-xs">
+          <div class="text-[11px] sm:text-xs text-slate-500 font-semibold flex items-center justify-between">
             <span>Green Eco-Pouch</span>
             <i class="fa-solid fa-recycle text-herbal-600"></i>
           </div>
-          <div class="mt-2 flex items-baseline space-x-2">
-            <span class="text-2xl font-black text-herbal-600">3 / 3</span>
-            <span class="text-xs text-slate-700 font-bold">Empties Ready</span>
+          <div class="mt-1 flex items-baseline space-x-1">
+            <span class="text-xl sm:text-2xl font-black text-herbal-600">3 / 3</span>
+            <span class="text-[10px] text-slate-700 font-bold">Empties Ready</span>
           </div>
-          <p class="text-[11px] text-herbal-600 font-medium mt-1">Free Discovery Gift Unlocked</p>
+          <p class="text-[10px] text-herbal-600 font-medium mt-1 truncate">Free Discovery Gift Unlocked</p>
         </div>
       </div>
 
       <!-- Side-by-Side: Morning vs Night Regimen Checklists -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         
         <!-- MORNING PROTOCOL (AM) -->
-        <div class="bg-gradient-to-b from-amber-50/70 via-orange-50/30 to-white border border-amber-200/80 rounded-3xl p-5 shadow-xs">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center space-x-2.5">
-              <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-700 flex items-center justify-center font-bold">
+        <div class="bg-gradient-to-b from-amber-50/70 via-orange-50/30 to-white border border-amber-200/80 rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xs">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center space-x-2">
+              <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-700 flex items-center justify-center font-bold text-xs">
                 <i class="fa-solid fa-sun"></i>
               </div>
               <div>
-                <h3 class="font-bold text-slate-900 text-sm">Morning Protocol (AM)</h3>
-                <p class="text-[11px] text-slate-500">Post-breakfast nutritional roots activation</p>
+                <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Morning Protocol (AM)</h3>
+                <p class="text-[10px] text-slate-500">Post-breakfast nutritional roots activation</p>
               </div>
             </div>
-            <span class="text-[11px] font-bold text-amber-800 bg-amber-100/70 border border-amber-200 px-2 py-0.5 rounded-full">08:00 AM - 10:00 AM</span>
+            <span class="text-[10px] font-bold text-amber-800 bg-amber-100/70 border border-amber-200 px-2 py-0.5 rounded-full">08:00 AM - 10:00 AM</span>
           </div>
 
           <!-- Morning Cards -->
           <div class="space-y-3" id="morningCardsContainer">
             <!-- Biotin Card -->
-            <div class="bg-white border border-oat-border rounded-2xl p-4 flex items-center justify-between hover:border-amber-300 transition">
-              <div class="flex items-center space-x-3.5">
-                <div class="relative w-12 h-14 bg-slate-50 rounded-xl border border-slate-200 p-1 flex items-center justify-center shrink-0">
-                  <div class="w-8 h-10 border border-slate-300 rounded-lg flex flex-col justify-end p-0.5 bg-amber-50/50 overflow-hidden">
+            <div class="bg-white border border-oat-border rounded-xl sm:rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 hover:border-amber-300 transition">
+              <div class="flex items-center space-x-3 min-w-0 w-full sm:w-auto">
+                <div class="relative w-10 h-12 bg-slate-50 rounded-lg border border-slate-200 p-1 flex items-center justify-center shrink-0">
+                  <div class="w-6 h-8 border border-slate-300 rounded-lg flex flex-col justify-end p-0.5 bg-amber-50/50 overflow-hidden">
                     <div id="figGummyLevel" class="bg-amber-500/80 rounded-b w-full transition-all" style="height: 70%"></div>
                   </div>
                 </div>
-                <div>
-                  <div class="flex items-center space-x-2">
-                    <h4 class="font-bold text-slate-900 text-sm">Biotin 5000mcg Gummies</h4>
-                    <span class="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-100 px-1.5 py-0.2 rounded font-semibold">1 Daily</span>
+                <div class="min-w-0">
+                  <div class="flex items-center space-x-1.5 flex-wrap">
+                    <h4 class="font-bold text-slate-900 text-xs sm:text-sm">Biotin 5000mcg Gummies</h4>
+                    <span class="text-[9px] bg-emerald-50 text-emerald-700 border border-emerald-100 px-1 py-0.2 rounded font-semibold">1 Daily</span>
                   </div>
-                  <p class="text-xs text-slate-500">Remaining: <span class="font-semibold text-slate-800" id="biotinQtyText">42 / 60 gummies</span> (~42 days left)</p>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Remaining: <span class="font-semibold text-slate-800" id="biotinQtyText">42 / 60 gummies</span> (~42 days left)</p>
                 </div>
               </div>
-              <button onclick="logDose('biotin', 1, 'Gummy')" id="btn-biotin" class="bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-xs">
+              <button onclick="logDose('biotin', 1, 'Gummy')" id="btn-biotin" class="w-full sm:w-auto justify-center bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-xs">
                 <i class="fa-solid fa-check"></i>
                 <span>Take Dose</span>
               </button>
             </div>
 
             <!-- Ketoconazole Shampoo Card -->
-            <div class="bg-white border border-oat-border rounded-2xl p-4 flex items-center justify-between hover:border-amber-300 transition">
-              <div class="flex items-center space-x-3.5">
-                <div class="relative w-12 h-14 bg-slate-50 rounded-xl border border-slate-200 p-1 flex items-center justify-center shrink-0">
-                  <div class="w-6 h-10 border border-slate-300 rounded-md flex flex-col justify-end p-0.5 bg-blue-50/50 overflow-hidden">
+            <div class="bg-white border border-oat-border rounded-xl sm:rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 hover:border-amber-300 transition">
+              <div class="flex items-center space-x-3 min-w-0 w-full sm:w-auto">
+                <div class="relative w-10 h-12 bg-slate-50 rounded-lg border border-slate-200 p-1 flex items-center justify-center shrink-0">
+                  <div class="w-5 h-8 border border-slate-300 rounded-md flex flex-col justify-end p-0.5 bg-blue-50/50 overflow-hidden">
                     <div id="figShampooLevel" class="bg-blue-500/70 rounded-b w-full transition-all" style="height: 67%"></div>
                   </div>
                 </div>
-                <div>
-                  <div class="flex items-center space-x-2">
-                    <h4 class="font-bold text-slate-900 text-sm">1% Ketoconazole Scalp Cleanser</h4>
-                    <span class="text-[10px] bg-slate-100 text-slate-700 px-1.5 py-0.2 rounded font-semibold">3x / Week</span>
+                <div class="min-w-0">
+                  <div class="flex items-center space-x-1.5 flex-wrap">
+                    <h4 class="font-bold text-slate-900 text-xs sm:text-sm">1% Ketoconazole Scalp Cleanser</h4>
+                    <span class="text-[9px] bg-slate-100 text-slate-700 px-1 py-0.2 rounded font-semibold">3x / Week</span>
                   </div>
-                  <p class="text-xs text-slate-500">Remaining: <span class="font-semibold text-slate-800" id="shampooQtyText">135.0 / 200 ml</span> (Cleanse scalp for 2 mins)</p>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Remaining: <span class="font-semibold text-slate-800" id="shampooQtyText">135.0 / 200 ml</span> (Cleanse scalp for 2 mins)</p>
                 </div>
               </div>
-              <button onclick="logDose('shampoo', 5, 'ml')" id="btn-shampoo" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5">
+              <button onclick="logDose('shampoo', 5, 'ml')" id="btn-shampoo" class="w-full sm:w-auto justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5">
                 <span>Not Today</span>
               </button>
             </div>
@@ -315,63 +315,63 @@
         </div>
 
         <!-- NIGHT PROTOCOL (PM) -->
-        <div class="bg-gradient-to-b from-[#111A24] via-[#14202D] to-[#182432] border border-slate-800 rounded-3xl p-5 shadow-xs text-white">
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center space-x-2.5">
-              <div class="w-8 h-8 rounded-xl bg-amber-400/20 text-amber-300 flex items-center justify-center font-bold">
+        <div class="bg-gradient-to-b from-[#111A24] via-[#14202D] to-[#182432] border border-slate-800 rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xs text-white">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center space-x-2">
+              <div class="w-7 h-7 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-bold text-xs">
                 <i class="fa-solid fa-moon"></i>
               </div>
               <div>
-                <h3 class="font-bold text-white text-sm">Night Protocol (PM)</h3>
-                <p class="text-[11px] text-slate-400">Targeted topical stimulation & follicle recovery</p>
+                <h3 class="font-bold text-white text-xs sm:text-sm">Night Protocol (PM)</h3>
+                <p class="text-[10px] text-slate-400">Targeted topical stimulation & follicle recovery</p>
               </div>
             </div>
-            <span class="text-[11px] font-bold text-amber-300 bg-amber-400/10 border border-amber-400/20 px-2 py-0.5 rounded-full">10:00 PM - 11:30 PM</span>
+            <span class="text-[10px] font-bold text-amber-300 bg-amber-400/10 border border-amber-400/20 px-2 py-0.5 rounded-full">10:00 PM - 11:30 PM</span>
           </div>
 
           <!-- Night Cards -->
           <div class="space-y-3" id="nightCardsContainer">
-            <!-- Minoxidil 5% Card with Low Stock & Live Calibrated Visual -->
-            <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-4 flex items-center justify-between hover:border-amber-400/50 transition">
-              <div class="flex items-center space-x-3.5">
-                <div class="relative w-12 h-14 bg-slate-900 rounded-xl border border-slate-700 p-1 flex items-center justify-center shrink-0">
-                  <div class="w-6 h-11 border border-amber-800/80 rounded flex flex-col justify-end p-0.5 bg-amber-950/40 relative overflow-hidden">
+            <!-- Minoxidil 5% Card -->
+            <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl sm:rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 hover:border-amber-400/50 transition">
+              <div class="flex items-center space-x-3 min-w-0 w-full sm:w-auto">
+                <div class="relative w-10 h-12 bg-slate-900 rounded-lg border border-slate-700 p-1 flex items-center justify-center shrink-0">
+                  <div class="w-5 h-9 border border-amber-800/80 rounded flex flex-col justify-end p-0.5 bg-amber-950/40 relative overflow-hidden">
                     <div id="figMinoxLevel" class="bg-amber-500 rounded-b w-full liquid-wave" style="height: 12%"></div>
                     <div class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-0.5 bg-amber-200/40"></div>
                   </div>
                 </div>
-                <div>
-                  <div class="flex items-center space-x-2">
-                    <h4 class="font-bold text-white text-sm">Minoxidil 5% Topical Solution</h4>
-                    <span class="text-[10px] bg-terracotta-500/20 text-terracotta-100 border border-terracotta-500/30 px-1.5 py-0.2 rounded font-semibold">1.0 ml Nightly</span>
+                <div class="min-w-0">
+                  <div class="flex items-center space-x-1.5 flex-wrap">
+                    <h4 class="font-bold text-white text-xs sm:text-sm">Minoxidil 5% Topical Solution</h4>
+                    <span class="text-[9px] bg-terracotta-500/20 text-terracotta-100 border border-terracotta-500/30 px-1 py-0.2 rounded font-semibold">1.0 ml Nightly</span>
                   </div>
-                  <p class="text-xs text-amber-300 font-semibold mt-0.5">Remaining: <span id="minoxQtyText">7.0 / 60 ml</span> (Low Supply!)</p>
-                  <p class="text-[11px] text-slate-400">Apply to dry vertex/crown scalp; do not blow-dry.</p>
+                  <p class="text-[11px] text-amber-300 font-semibold mt-0.5">Remaining: <span id="minoxQtyText">7.0 / 60 ml</span> (Low Supply!)</p>
+                  <p class="text-[10px] text-slate-400 truncate">Apply to dry vertex/crown scalp; do not blow-dry.</p>
                 </div>
               </div>
-              <button onclick="logDose('minoxidil', 1, 'ml')" id="btn-minoxidil" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-xs">
+              <button onclick="logDose('minoxidil', 1, 'ml')" id="btn-minoxidil" class="w-full sm:w-auto justify-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-xs">
                 <i class="fa-solid fa-droplet"></i>
                 <span>Log 1.0 ml</span>
               </button>
             </div>
 
             <!-- DHT Blocker Capsule -->
-            <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-4 flex items-center justify-between hover:border-slate-600 transition">
-              <div class="flex items-center space-x-3.5">
-                <div class="relative w-12 h-14 bg-slate-900 rounded-xl border border-slate-700 p-1 flex items-center justify-center shrink-0">
-                  <div class="w-6 h-10 border border-slate-700 rounded flex flex-col justify-end p-0.5 bg-slate-800 overflow-hidden">
+            <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl sm:rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 hover:border-slate-600 transition">
+              <div class="flex items-center space-x-3 min-w-0 w-full sm:w-auto">
+                <div class="relative w-10 h-12 bg-slate-900 rounded-lg border border-slate-700 p-1 flex items-center justify-center shrink-0">
+                  <div class="w-5 h-8 border border-slate-700 rounded flex flex-col justify-end p-0.5 bg-slate-800 overflow-hidden">
                     <div id="figCapsuleLevel" class="bg-emerald-500/70 rounded-b w-full transition-all" style="height: 50%"></div>
                   </div>
                 </div>
-                <div>
-                  <div class="flex items-center space-x-2">
-                    <h4 class="font-bold text-white text-sm">Saw Palmetto DHT Blocker</h4>
-                    <span class="text-[10px] bg-slate-700 text-slate-300 px-1.5 py-0.2 rounded font-semibold">1 Capsule</span>
+                <div class="min-w-0">
+                  <div class="flex items-center space-x-1.5 flex-wrap">
+                    <h4 class="font-bold text-white text-xs sm:text-sm">Saw Palmetto DHT Blocker</h4>
+                    <span class="text-[9px] bg-slate-700 text-slate-300 px-1 py-0.2 rounded font-semibold">1 Capsule</span>
                   </div>
-                  <p class="text-xs text-slate-300">Remaining: <span class="font-semibold text-white" id="dhtQtyText">30 / 60 caps</span> (With warm water)</p>
+                  <p class="text-[11px] text-slate-300 mt-0.5">Remaining: <span class="font-semibold text-white" id="dhtQtyText">30 / 60 caps</span> (With warm water)</p>
                 </div>
               </div>
-              <button onclick="logDose('dht', 1, 'cap')" id="btn-dht" class="bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-xs">
+              <button onclick="logDose('dht', 1, 'cap')" id="btn-dht" class="w-full sm:w-auto justify-center bg-herbal-500 hover:bg-herbal-600 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-xs">
                 <i class="fa-solid fa-check"></i>
                 <span>Take Dose</span>
               </button>
@@ -382,33 +382,33 @@
       </div>
 
       <!-- Quick Dual Cards: Scalp Milestone & Eco-Pouch Status -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white border border-oat-border rounded-3xl p-5 flex items-center justify-between shadow-xs">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-4 sm:p-5 flex items-center justify-between shadow-xs">
           <div>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-700 border border-purple-200 px-2 py-0.5 rounded-full">Photobiological Log</span>
-            <h4 class="font-bold text-slate-900 text-base mt-2">Next Scalp Photo Due in 3 Days</h4>
+            <span class="text-[9px] font-bold uppercase tracking-wider bg-purple-50 text-purple-700 border border-purple-200 px-2 py-0.5 rounded-full">Photobiological Log</span>
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-2">Next Scalp Photo Due in 3 Days</h4>
             <p class="text-xs text-slate-500 mt-1 max-w-sm">Day 45 milestone unlocks on 19 Oct 2026. Consistent camera alignment reveals real follicle density before mirror perception kicks in.</p>
             <button onclick="switchTab('journal')" class="mt-3 text-xs font-bold text-purple-700 hover:text-purple-800 flex items-center space-x-1">
               <span>View Alignment Guidelines & Split Slider</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
-          <div class="w-16 h-16 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 text-2xl shrink-0">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 text-xl sm:text-2xl shrink-0">
             <i class="fa-solid fa-camera-retro"></i>
           </div>
         </div>
 
-        <div class="bg-white border border-oat-border rounded-3xl p-5 flex items-center justify-between shadow-xs">
+        <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-4 sm:p-5 flex items-center justify-between shadow-xs">
           <div>
-            <span class="text-[10px] font-bold uppercase tracking-wider bg-herbal-50 text-herbal-700 border border-herbal-200 px-2 py-0.5 rounded-full">Doorstep Recycling</span>
-            <h4 class="font-bold text-slate-900 text-base mt-2">3 Empties Ready for Handover</h4>
+            <span class="text-[9px] font-bold uppercase tracking-wider bg-herbal-50 text-herbal-700 border border-herbal-200 px-2 py-0.5 rounded-full">Doorstep Recycling</span>
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-2">3 Empties Ready for Handover</h4>
             <p class="text-xs text-slate-500 mt-1 max-w-sm">No awkward retail returns. Simply seal the opaque Green Pouch and hand it to the delivery agent during your next refill order to claim your free discovery sample.</p>
             <button onclick="switchTab('pouch')" class="mt-3 text-xs font-bold text-herbal-600 hover:text-herbal-700 flex items-center space-x-1">
               <span>Open Pouch Verification & Claim Sample</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </button>
           </div>
-          <div class="w-16 h-16 rounded-2xl bg-herbal-50 border border-herbal-200 flex items-center justify-center text-herbal-600 text-2xl shrink-0">
+          <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-herbal-50 border border-herbal-200 flex items-center justify-center text-herbal-600 text-xl sm:text-2xl shrink-0">
             <i class="fa-solid fa-box-archive"></i>
           </div>
         </div>
@@ -419,25 +419,25 @@
     <!-- ========================================== -->
     <!-- TAB 2: PRESCRIBED REGIMEN (CUSTOMIZER)     -->
     <!-- ========================================== -->
-    <div id="view-routine" class="hidden space-y-6">
-      <div class="flex items-center justify-between">
+    <div id="view-routine" class="hidden space-y-4 sm:space-y-6">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
         <div>
-          <h2 class="text-xl font-bold text-slate-900">Custom Regimen Protocol</h2>
-          <p class="text-xs text-slate-500">Configure dosing schedules, timings, and custom clinical habits.</p>
+          <h2 class="text-base sm:text-xl font-bold text-slate-900">Custom Regimen Protocol</h2>
+          <p class="text-[11px] sm:text-xs text-slate-500">Configure dosing schedules, timings, and custom clinical habits.</p>
         </div>
-        <button onclick="openCustomHabitModal()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs transition flex items-center space-x-1.5">
+        <button onclick="openCustomHabitModal()" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2 rounded-xl shadow-xs transition flex items-center justify-center space-x-1.5">
           <i class="fa-solid fa-plus"></i>
           <span>Add Custom Regimen Item</span>
         </button>
       </div>
 
       <!-- Synchronized Volume Telemetry Table -->
-      <div class="bg-white border border-oat-border rounded-3xl p-6 shadow-xs">
-        <h3 class="font-bold text-slate-900 text-sm mb-4">Real-Time Treatment Supply Inventory</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xs">
+        <h3 class="font-bold text-slate-900 text-xs sm:text-sm mb-4">Real-Time Treatment Supply Inventory</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           
           <!-- Minoxidil -->
-          <div class="border border-oat-border rounded-2xl p-4 bg-slate-50/50 flex flex-col justify-between">
+          <div class="border border-oat-border rounded-xl sm:rounded-2xl p-4 bg-slate-50/50 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between text-xs font-semibold text-slate-500">
                 <span>Topical Scalp Solution</span>
@@ -459,7 +459,7 @@
           </div>
 
           <!-- Biotin Gummies -->
-          <div class="border border-oat-border rounded-2xl p-4 bg-slate-50/50 flex flex-col justify-between">
+          <div class="border border-oat-border rounded-xl sm:rounded-2xl p-4 bg-slate-50/50 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between text-xs font-semibold text-slate-500">
                 <span>Nutritional Root Support</span>
@@ -481,7 +481,7 @@
           </div>
 
           <!-- Shampoo -->
-          <div class="border border-oat-border rounded-2xl p-4 bg-slate-50/50 flex flex-col justify-between">
+          <div class="border border-oat-border rounded-xl sm:rounded-2xl p-4 bg-slate-50/50 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between text-xs font-semibold text-slate-500">
                 <span>Scalp Anti-Microbial</span>
@@ -503,7 +503,7 @@
           </div>
 
           <!-- DHT Blocker -->
-          <div class="border border-oat-border rounded-2xl p-4 bg-slate-50/50 flex flex-col justify-between">
+          <div class="border border-oat-border rounded-xl sm:rounded-2xl p-4 bg-slate-50/50 flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between text-xs font-semibold text-slate-500">
                 <span>Follicle Shield</span>
@@ -531,40 +531,40 @@
     <!-- ========================================== -->
     <!-- TAB 3: ADHERENCE CALENDAR & STREAK SHIELD  -->
     <!-- ========================================== -->
-    <div id="view-calendar" class="hidden space-y-6">
+    <div id="view-calendar" class="hidden space-y-4 sm:space-y-6">
       
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 class="text-xl font-bold text-slate-900">30-Day Adherence & Compliance Analytics</h2>
-          <p class="text-xs text-slate-500">Click any past date to retroactively log forgotten doses or apply your Grace Shield.</p>
+          <h2 class="text-base sm:text-xl font-bold text-slate-900">30-Day Adherence & Compliance Analytics</h2>
+          <p class="text-[11px] sm:text-xs text-slate-500">Click any past date to retroactively log forgotten doses or apply your Grace Shield.</p>
         </div>
-        <div class="flex items-center space-x-2 bg-herbal-50 border border-herbal-100 px-3.5 py-2 rounded-xl text-xs font-bold text-herbal-700">
+        <div class="flex items-center space-x-2 bg-herbal-50 border border-herbal-100 px-3 py-1.5 rounded-xl text-xs font-bold text-herbal-700">
           <i class="fa-solid fa-shield-halved text-sm"></i>
           <span>1 Grace Day Allowed Per Week (Streak Protection Shield)</span>
         </div>
       </div>
 
       <!-- 7-Day Quick Strip -->
-      <div class="bg-white border border-oat-border rounded-3xl p-5 shadow-xs">
+      <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xs">
         <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Current Week Compliance (Oct 12 - Oct 18, 2026)</h3>
-        <div class="grid grid-cols-7 gap-2 text-center" id="weeklyQuickStrip"></div>
+        <div class="grid grid-cols-7 gap-1.5 sm:gap-2 text-center" id="weeklyQuickStrip"></div>
       </div>
 
       <!-- 31-Day Month Calendar -->
-      <div class="bg-white border border-oat-border rounded-3xl p-6 shadow-xs">
-        <div class="flex items-center justify-between mb-4">
+      <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xs">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-2">
           <h3 class="font-bold text-slate-900 text-sm">October 2026 Regimen Log</h3>
-          <div class="flex items-center space-x-4 text-xs font-semibold">
-            <span class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-herbal-500 inline-block"></span><span class="text-slate-600">Completed (✓)</span></span>
-            <span class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-amber-400 inline-block"></span><span class="text-slate-600">Grace Day (🛡️)</span></span>
-            <span class="flex items-center space-x-1.5"><span class="w-3 h-3 rounded bg-terracotta-500 inline-block"></span><span class="text-slate-600">Missed (–)</span></span>
+          <div class="flex items-center space-x-3 sm:space-x-4 text-[10px] sm:text-xs font-semibold">
+            <span class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded bg-herbal-500 inline-block"></span><span class="text-slate-600">Completed (✓)</span></span>
+            <span class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded bg-amber-400 inline-block"></span><span class="text-slate-600">Grace Day (🛡️)</span></span>
+            <span class="flex items-center space-x-1.5"><span class="w-2.5 h-2.5 rounded bg-terracotta-500 inline-block"></span><span class="text-slate-600">Missed (–)</span></span>
           </div>
         </div>
 
-        <div class="grid grid-cols-7 gap-2 text-center text-xs font-bold text-slate-400 mb-2">
+        <div class="grid grid-cols-7 gap-1.5 sm:gap-2 text-center text-[10px] sm:text-xs font-bold text-slate-400 mb-2">
           <div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div><div>SUN</div>
         </div>
-        <div class="grid grid-cols-7 gap-2" id="fullMonthCalendarGrid"></div>
+        <div class="grid grid-cols-7 gap-1.5 sm:gap-2" id="fullMonthCalendarGrid"></div>
       </div>
 
     </div>
@@ -572,89 +572,89 @@
     <!-- ========================================== -->
     <!-- TAB 4: 15-DAY SCALP PHOTOBIOLOGICAL LOG    -->
     <!-- ========================================== -->
-    <div id="view-journal" class="hidden space-y-6">
+    <div id="view-journal" class="hidden space-y-4 sm:space-y-6">
       
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 class="text-xl font-bold text-slate-900">Photobiological Milestone Journal</h2>
-          <p class="text-xs text-slate-500">Every 15 days, standardized photos reveal progressive root stabilization before daily mirrors show change.</p>
+          <h2 class="text-base sm:text-xl font-bold text-slate-900">Photobiological Milestone Journal</h2>
+          <p class="text-[11px] sm:text-xs text-slate-500">Every 15 days, standardized photos reveal progressive root stabilization before daily mirrors show change.</p>
         </div>
-        <button onclick="triggerPhotoUpload()" class="bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs transition flex items-center space-x-1.5">
+        <button onclick="triggerPhotoUpload()" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs px-4 py-2 rounded-xl shadow-xs transition flex items-center justify-center space-x-1.5">
           <i class="fa-solid fa-camera"></i>
           <span>Log Day 45 Photo with Camera Outline</span>
         </button>
       </div>
 
       <!-- Roadmap Timeline of 15-Day Milestones -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-white border-2 border-herbal-500/40 rounded-2xl p-4 shadow-xs">
-          <div class="flex items-center justify-between text-xs font-bold text-herbal-600">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+        <div class="bg-white border-2 border-herbal-500/40 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xs">
+          <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-herbal-600">
             <span>Day 0 (Baseline)</span>
             <i class="fa-solid fa-circle-check"></i>
           </div>
           <p class="text-xs font-semibold text-slate-900 mt-1">01 Sep 2026</p>
-          <p class="text-[11px] text-slate-500 mt-0.5">Vertex & crown density benchmark registered.</p>
+          <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Vertex & crown density benchmark registered.</p>
         </div>
 
-        <div class="bg-white border-2 border-herbal-500/40 rounded-2xl p-4 shadow-xs">
-          <div class="flex items-center justify-between text-xs font-bold text-herbal-600">
+        <div class="bg-white border-2 border-herbal-500/40 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xs">
+          <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-herbal-600">
             <span>Day 15 Check</span>
             <i class="fa-solid fa-circle-check"></i>
           </div>
           <p class="text-xs font-semibold text-slate-900 mt-1">16 Sep 2026</p>
-          <p class="text-[11px] text-slate-500 mt-0.5">Scalp toleration verified. Telogen transition starts.</p>
+          <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Scalp toleration verified. Telogen transition starts.</p>
         </div>
 
-        <div class="bg-white border-2 border-herbal-500/40 rounded-2xl p-4 shadow-xs">
-          <div class="flex items-center justify-between text-xs font-bold text-herbal-600">
+        <div class="bg-white border-2 border-herbal-500/40 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xs">
+          <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-herbal-600">
             <span>Day 30 Check</span>
             <i class="fa-solid fa-circle-check"></i>
           </div>
           <p class="text-xs font-semibold text-slate-900 mt-1">01 Oct 2026</p>
-          <p class="text-[11px] text-slate-500 mt-0.5">Shedding peak monitored. Root anchoring initiated.</p>
+          <p class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">Shedding peak monitored. Root anchoring initiated.</p>
         </div>
 
-        <div class="bg-purple-50/50 border-2 border-purple-500 rounded-2xl p-4 shadow-xs relative">
-          <div class="flex items-center justify-between text-xs font-bold text-purple-700">
+        <div class="bg-purple-50/50 border-2 border-purple-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xs relative">
+          <div class="flex items-center justify-between text-[11px] sm:text-xs font-bold text-purple-700">
             <span>Day 45 (Upcoming)</span>
-            <span class="animate-pulse bg-purple-200 text-purple-900 text-[10px] px-1.5 py-0.2 rounded">Due in 3d</span>
+            <span class="animate-pulse bg-purple-200 text-purple-900 text-[9px] px-1.5 py-0.2 rounded">Due in 3d</span>
           </div>
           <p class="text-xs font-bold text-slate-900 mt-1">19 Oct 2026</p>
-          <p class="text-[11px] text-purple-700 mt-0.5">Early follicular thickening verification.</p>
+          <p class="text-[10px] sm:text-[11px] text-purple-700 mt-0.5">Early follicular thickening verification.</p>
         </div>
       </div>
 
       <!-- Side-by-Side Interactive Draggable Comparison Slider -->
-      <div class="bg-white border border-oat-border rounded-3xl p-6 shadow-xs">
+      <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xs">
         <div class="flex items-center justify-between mb-4">
           <div>
-            <h3 class="font-bold text-slate-900 text-sm">Interactive Split Density Comparison</h3>
-            <p class="text-xs text-slate-500">Drag the center slider horizontally to compare Day 0 (Baseline) against Day 30.</p>
+            <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Interactive Split Density Comparison</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500">Drag the center slider horizontally (or swipe on phone) to compare Day 0 against Day 30.</p>
           </div>
-          <span class="text-xs font-mono font-bold bg-slate-100 px-2.5 py-1 rounded-lg text-slate-700">Day 0 vs Day 30</span>
+          <span class="text-[10px] sm:text-xs font-mono font-bold bg-slate-100 px-2 sm:px-2.5 py-1 rounded-lg text-slate-700">Day 0 vs Day 30</span>
         </div>
 
-        <div class="relative w-full max-w-2xl mx-auto h-72 sm:h-80 rounded-2xl overflow-hidden border border-slate-300 select-none cursor-ew-resize" id="sliderWrapper">
+        <div class="relative w-full max-w-2xl mx-auto h-64 sm:h-80 rounded-2xl overflow-hidden border border-slate-300 select-none cursor-ew-resize" id="sliderWrapper">
           <div class="absolute inset-0 bg-slate-800 flex items-center justify-center text-white">
-            <div class="text-center p-6">
-              <i class="fa-solid fa-circle-nodes text-4xl text-emerald-400 mb-2"></i>
-              <div class="font-bold text-sm">Day 30 Progress State</div>
-              <p class="text-xs text-slate-300 mt-1">Baby vellus hairs sprouting along the vertex crown; follicle micro-circulation stabilized.</p>
+            <div class="text-center p-4 sm:p-6">
+              <i class="fa-solid fa-circle-nodes text-3xl sm:text-4xl text-emerald-400 mb-2"></i>
+              <div class="font-bold text-xs sm:text-sm">Day 30 Progress State</div>
+              <p class="text-[10px] sm:text-xs text-slate-300 mt-1 max-w-sm">Baby vellus hairs sprouting along the vertex crown; follicle micro-circulation stabilized.</p>
             </div>
-            <span class="absolute bottom-3 right-3 bg-black/70 text-white text-[10px] font-bold px-2 py-0.5 rounded">Day 30</span>
+            <span class="absolute bottom-3 right-3 bg-black/70 text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded">Day 30</span>
           </div>
 
           <div id="sliderForeground" class="absolute inset-0 bg-slate-900 flex items-center justify-center text-white border-r-2 border-white" style="width: 50%;">
-            <div class="text-center p-6">
-              <i class="fa-solid fa-chart-line text-4xl text-amber-400 mb-2"></i>
-              <div class="font-bold text-sm">Day 0 Baseline State</div>
-              <p class="text-xs text-slate-300 mt-1">Baseline thinning pattern at crown; inactive telogen resting follicles.</p>
+            <div class="text-center p-4 sm:p-6">
+              <i class="fa-solid fa-chart-line text-3xl sm:text-4xl text-amber-400 mb-2"></i>
+              <div class="font-bold text-xs sm:text-sm">Day 0 Baseline State</div>
+              <p class="text-[10px] sm:text-xs text-slate-300 mt-1 max-w-sm">Baseline thinning pattern at crown; inactive telogen resting follicles.</p>
             </div>
-            <span class="absolute bottom-3 left-3 bg-black/70 text-white text-[10px] font-bold px-2 py-0.5 rounded">Day 0 (Baseline)</span>
+            <span class="absolute bottom-3 left-3 bg-black/70 text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded">Day 0 (Baseline)</span>
           </div>
 
           <div id="sliderHandle" class="absolute top-0 bottom-0 w-8 -ml-4 flex items-center justify-center pointer-events-none" style="left: 50%;">
-            <div class="w-8 h-8 rounded-full bg-white shadow-lg border border-slate-300 flex items-center justify-center text-slate-800 text-xs">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white shadow-lg border border-slate-300 flex items-center justify-center text-slate-800 text-xs">
               <i class="fa-solid fa-arrows-left-right"></i>
             </div>
           </div>
@@ -666,63 +666,64 @@
     <!-- ========================================== -->
     <!-- TAB 5: GREEN ECO-POUCH DOORSTEP RECYCLING  -->
     <!-- ========================================== -->
-    <div id="view-pouch" class="hidden space-y-6">
+    <div id="view-pouch" class="hidden space-y-4 sm:space-y-6">
       
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 class="text-xl font-bold text-slate-900">Circular Packaging Stewardship (Green Eco-Pouch)</h2>
-          <p class="text-xs text-slate-500">Return finished empties privately at your doorstep during your next delivery to unlock free trial samples.</p>
+          <h2 class="text-base sm:text-xl font-bold text-slate-900">Circular Packaging Stewardship (Green Eco-Pouch)</h2>
+          <p class="text-[11px] sm:text-xs text-slate-500">Return finished empties privately at your doorstep during your next delivery to unlock free trial samples.</p>
         </div>
-        <div class="bg-herbal-50 border border-herbal-200 text-herbal-700 px-3.5 py-1.5 rounded-xl text-xs font-bold">
+        <div class="bg-herbal-50 border border-herbal-200 text-herbal-700 px-3 py-1.5 rounded-xl text-xs font-bold">
           <i class="fa-solid fa-leaf mr-1"></i>320g Virgin Plastic Diverted
         </div>
       </div>
 
-      <div class="bg-white border border-oat-border rounded-3xl p-6 shadow-xs">
-        <h3 class="font-bold text-slate-900 text-sm mb-3">Eliminating Retail Awkwardness (The Stigma-Free Model)</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+      <!-- Why Doorstep Handover Explainer Box -->
+      <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xs">
+        <h3 class="font-bold text-slate-900 text-xs sm:text-sm mb-3">Eliminating Retail Awkwardness (The Stigma-Free Model)</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs">
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70">
-            <div class="w-7 h-7 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold mb-2">1</div>
+            <div class="w-6 h-6 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold mb-2 text-xs">1</div>
             <div class="font-bold text-slate-900">Seal Empties into Opaque Pouch</div>
-            <p class="text-slate-500 mt-1">No need to take empty Minoxidil or performance bottles to public retail bins.</p>
+            <p class="text-slate-500 mt-1 text-[11px]">No need to take empty Minoxidil or performance bottles to public retail bins.</p>
           </div>
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70">
-            <div class="w-7 h-7 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold mb-2">2</div>
+            <div class="w-6 h-6 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold mb-2 text-xs">2</div>
             <div class="font-bold text-slate-900">Handover at Your Doorstep</div>
-            <p class="text-slate-500 mt-1">The delivery partner picks up the sealed pouch when handing over your next routine refill.</p>
+            <p class="text-slate-500 mt-1 text-[11px]">The delivery partner picks up the sealed pouch when handing over your next routine refill.</p>
           </div>
           <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70">
-            <div class="w-7 h-7 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold mb-2">3</div>
+            <div class="w-6 h-6 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center font-bold mb-2 text-xs">3</div>
             <div class="font-bold text-slate-900">Receive Free Discovery Samples</div>
-            <p class="text-slate-500 mt-1">Get complimentary samples of upcoming beard or face care products packed in your refill box.</p>
+            <p class="text-slate-500 mt-1 text-[11px]">Get complimentary samples of upcoming beard or face care products packed in your refill box.</p>
           </div>
         </div>
       </div>
 
-      <!-- Active Pouch Capacity (3 of 3 Full) & Photo Verification -->
-      <div class="bg-gradient-to-r from-herbal-50 to-emerald-50 border border-herbal-200 rounded-3xl p-6 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="space-y-3">
+      <!-- Active Pouch Capacity & Verification -->
+      <div class="bg-gradient-to-r from-herbal-50 to-emerald-50 border border-herbal-200 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+        <div class="space-y-2.5">
           <div class="flex items-center space-x-2">
-            <span class="font-bold text-slate-900 text-base">Your Pouch Status: Ready for Collection</span>
-            <span class="bg-herbal-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">3 / 3 Containers Stowed</span>
+            <span class="font-bold text-slate-900 text-sm sm:text-base">Your Pouch Status: Ready for Collection</span>
+            <span class="bg-herbal-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">3 / 3 Containers Stowed</span>
           </div>
           <p class="text-xs text-slate-600 max-w-xl">
             You have stowed 1x Minoxidil 60ml Dropper, 1x Biotin Jar, and 1x Shampoo 200ml Bottle. Take a quick photo of the sealed pouch to verify and unlock your trial discovery gift.
           </p>
-          <div class="flex items-center space-x-3 pt-1">
-            <button onclick="openPouchVerifyModal()" class="bg-herbal-600 hover:bg-herbal-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-xs flex items-center space-x-2">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
+            <button onclick="openPouchVerifyModal()" class="bg-herbal-600 hover:bg-herbal-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-xs flex items-center justify-center space-x-2">
               <i class="fa-solid fa-camera"></i>
               <span>Upload Verification Photo</span>
             </button>
-            <button onclick="claimSampleModal()" class="bg-white hover:bg-herbal-50 text-herbal-700 border border-herbal-300 font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-xs">
+            <button onclick="claimSampleModal()" class="bg-white hover:bg-herbal-50 text-herbal-700 border border-herbal-300 font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-xs text-center">
               Select Free Discovery Sample
             </button>
           </div>
         </div>
-        <div class="w-32 h-36 bg-herbal-600 rounded-2xl shadow-md border-2 border-herbal-700 flex flex-col items-center justify-center text-white p-3 text-center shrink-0">
-          <i class="fa-solid fa-shield-cat text-3xl opacity-80 mb-2"></i>
-          <span class="text-[10px] font-bold uppercase tracking-wider">ECO POUCH</span>
-          <span class="text-xs font-black text-amber-300 mt-1">SEALED & READY</span>
+        <div class="w-28 h-32 sm:w-32 sm:h-36 bg-herbal-600 rounded-2xl shadow-md border-2 border-herbal-700 flex flex-col items-center justify-center text-white p-3 text-center shrink-0">
+          <i class="fa-solid fa-shield-cat text-2xl sm:text-3xl opacity-80 mb-1 sm:mb-2"></i>
+          <span class="text-[9px] font-bold uppercase tracking-wider">ECO POUCH</span>
+          <span class="text-[11px] sm:text-xs font-black text-amber-300 mt-1">SEALED & READY</span>
         </div>
       </div>
 
@@ -731,19 +732,19 @@
     <!-- ========================================== -->
     <!-- TAB 6: CLINICAL REGIMEN AI COACH           -->
     <!-- ========================================== -->
-    <div id="view-ai" class="hidden space-y-6">
+    <div id="view-ai" class="hidden space-y-4 sm:space-y-6">
       
-      <div class="flex items-center justify-between">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
         <div>
-          <h2 class="text-xl font-bold text-slate-900">Dr. Rohan • Clinical Regimen Advisor</h2>
-          <p class="text-xs text-slate-500">Ask any question regarding missed doses, shedding phases, washing routines, and application safety.</p>
+          <h2 class="text-base sm:text-xl font-bold text-slate-900">Dr. Rohan • Clinical Regimen Advisor</h2>
+          <p class="text-[11px] sm:text-xs text-slate-500">Ask any question regarding missed doses, shedding phases, washing routines, and application safety.</p>
         </div>
         <button onclick="openDoctorModal()" class="bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 text-xs font-semibold px-3 py-1.5 rounded-xl transition">
           <i class="fa-solid fa-phone text-herbal-600 mr-1"></i>Schedule Human Telehealth
         </button>
       </div>
 
-      <div class="bg-white border border-oat-border rounded-3xl p-5 shadow-xs flex flex-col h-[520px]">
+      <div class="bg-white border border-oat-border rounded-2xl sm:rounded-3xl p-4 sm:p-5 shadow-xs flex flex-col h-[520px]">
         <div id="chatMessages" class="flex-1 overflow-y-auto space-y-3.5 pr-2">
           <div class="flex items-start space-x-3">
             <div class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold shrink-0">
@@ -758,24 +759,24 @@
 
         <!-- Quick Question Chips -->
         <div class="py-2.5 flex items-center space-x-2 overflow-x-auto hide-scrollbar border-t border-oat-border mt-3">
-          <button onclick="sendQuickQuery('Why am I shedding more hairs in week 6?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-full transition">
+          <button onclick="sendQuickQuery('Why am I shedding more hairs in week 6?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-full transition whitespace-nowrap">
             Is week 6 shedding normal?
           </button>
-          <button onclick="sendQuickQuery('Can I apply Minoxidil on damp hair?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-full transition">
+          <button onclick="sendQuickQuery('Can I apply Minoxidil on damp hair?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-full transition whitespace-nowrap">
             Can I apply on damp hair?
           </button>
-          <button onclick="sendQuickQuery('What should I do if I missed last night dose?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-full transition">
+          <button onclick="sendQuickQuery('What should I do if I missed last night dose?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-full transition whitespace-nowrap">
             What if I missed last night's dose?
           </button>
-          <button onclick="sendQuickQuery('How do I return the Green Eco-Pouch?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-full transition">
+          <button onclick="sendQuickQuery('How do I return the Green Eco-Pouch?')" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold px-3 py-1.5 rounded-full transition whitespace-nowrap">
             How do I hand over the Eco-Pouch?
           </button>
         </div>
 
         <!-- Chat Input Bar -->
         <form onsubmit="handleChatSubmit(event)" class="flex items-center space-x-2 pt-2">
-          <input type="text" id="chatInput" placeholder="Ask Dr. Rohan anything about your treatment schedule..." class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-slate-800 transition">
-          <button type="submit" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition">
+          <input type="text" id="chatInput" placeholder="Ask Dr. Rohan anything about your schedule..." class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-xs text-slate-800 focus:outline-none focus:border-slate-800 transition">
+          <button type="submit" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition shrink-0">
             <i class="fa-solid fa-paper-plane"></i>
           </button>
         </form>
@@ -786,14 +787,14 @@
   </main>
 
   <!-- CLINICAL FOOTER & SAFETY DISCLAIMER -->
-  <footer class="bg-white border-t border-oat-border py-6 mt-12 text-slate-500 text-xs">
+  <footer class="bg-white border-t border-oat-border py-6 mt-8 sm:mt-12 text-slate-500 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center space-x-3">
         <div class="w-6 h-6 rounded-md bg-slate-900 flex items-center justify-center text-white font-bold text-xs">M</div>
         <span class="font-bold text-slate-700">Man Matters Medical Regimen Platform</span>
       </div>
       <p class="text-[11px] text-center md:text-left text-slate-400 max-w-xl">
-        Medical Notice: Minoxidil 5% and Saw Palmetto are prescription-grade compounds. If unexpected skin redness or dizziness occurs, discontinue application and speak directly with your assigned Man Matters physician.
+        Medical Notice: Minoxidil 5% and Saw Palmetto are prescription-grade compounds. If unexpected skin redness occurs, discontinue application and speak directly with your assigned physician.
       </p>
       <div class="text-[11px] text-slate-400">
         Placement Submission Demo • Mosaic Wellness
@@ -805,63 +806,79 @@
   <!-- MODALS                                     -->
   <!-- ========================================== -->
 
-  <!-- MODAL: SIMULATED WHATSAPP CARE BOT CHAT -->
-  <div id="whatsappModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center hidden p-4">
-    <div class="bg-[#ECE5DD] w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-slate-300 flex flex-col h-[520px]">
-      <div class="bg-[#075E54] text-white p-3.5 flex items-center justify-between">
-        <div class="flex items-center space-x-3">
-          <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center font-bold text-sm">
-            <i class="fa-solid fa-user-doctor text-emerald-300"></i>
-          </div>
+  <!-- UPGRADED WHATSAPP CARE BOT MODAL (WITH PHONE NUMBER LINKAGE) -->
+  <div id="whatsappModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center hidden p-3">
+    <div class="bg-[#ECE5DD] w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl flex flex-col h-[520px]">
+      
+      <!-- WhatsApp Header -->
+      <div class="bg-[#075E54] text-white p-3 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <i class="fa-solid fa-user-doctor text-emerald-300"></i>
           <div>
-            <div class="font-bold text-sm flex items-center space-x-1">
-              <span>Man Matters Care Bot</span>
-              <i class="fa-solid fa-circle-check text-emerald-300 text-xs"></i>
-            </div>
-            <p class="text-[10px] text-emerald-100">Official Regimen Compliance Assistant</p>
+            <div class="font-bold text-xs">Man Matters Care Bot</div>
+            <div class="text-[9px] text-emerald-100">WhatsApp Notification Manager</div>
           </div>
         </div>
-        <button onclick="toggleWhatsAppModal(false)" class="text-white hover:text-slate-200 text-lg p-1">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+        <button onclick="toggleWhatsAppModal(false)" class="text-white text-base">✕</button>
       </div>
 
-      <div class="flex-1 p-4 overflow-y-auto space-y-3 font-sans text-xs">
+      <!-- Phone Number Linking Card -->
+      <div class="p-3 bg-white border-b border-slate-200 shadow-xs">
+        <div class="text-[11px] font-bold text-slate-800 mb-1">Connected WhatsApp Mobile Number</div>
+        <div class="flex items-center space-x-1.5">
+          <span class="text-xs bg-slate-100 border border-slate-300 px-2 py-1.5 rounded-lg text-slate-600 font-bold">+91</span>
+          <input type="tel" id="userPhoneInput" maxlength="10" placeholder="10-digit number" class="flex-1 bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-[#075E54]">
+          <button onclick="saveUserPhoneNumber()" class="bg-[#075E54] hover:bg-[#064e46] text-white text-xs font-bold px-3 py-1.5 rounded-lg transition">Save</button>
+        </div>
+        <p id="phoneSaveNotice" class="text-[10px] text-emerald-600 font-medium mt-1 hidden">
+          <i class="fa-solid fa-circle-check"></i> Linked: Daily 10:00 PM dose ping active.
+        </p>
+      </div>
+
+      <!-- WhatsApp Simulated Chat Feed -->
+      <div class="flex-1 p-3 overflow-y-auto space-y-2 text-xs font-sans">
         <div class="text-center">
-          <span class="bg-[#D1EBE7] text-slate-600 text-[10px] px-2.5 py-1 rounded-md font-semibold">Today • 10:00 PM Scheduled Dose Ping</span>
+          <span class="bg-[#D1EBE7] text-slate-600 text-[10px] px-2.5 py-0.5 rounded-md font-semibold">Today • 10:00 PM Scheduled Ping</span>
         </div>
 
-        <div class="bg-white rounded-xl rounded-tl-none p-3 shadow-xs max-w-[85%] text-slate-800 space-y-2">
-          <p class="font-semibold text-slate-900">Hey Rahul! Time for your Night Protocol 🌙</p>
+        <div class="bg-white rounded-xl rounded-tl-none p-3 shadow-xs space-y-2 text-slate-800">
+          <p class="font-semibold text-slate-900">Hey Rahul! Time for Night Protocol 🌙</p>
           <p>Please apply your <strong>1.0 ml Minoxidil 5%</strong> to dry vertex areas. You are on an <strong>18-day streak</strong>—keep the momentum going!</p>
-          <div class="pt-1">
-            <button onclick="whatsappLogMinoxidil()" class="w-full bg-[#25D366] hover:bg-[#1ebc59] text-white font-bold py-2 rounded-lg text-center transition flex items-center justify-center space-x-1.5 shadow-xs">
-              <i class="fa-solid fa-check-double"></i>
+          
+          <div class="space-y-1.5 pt-1">
+            <button onclick="whatsappLogMinoxidil()" class="w-full bg-[#25D366] hover:bg-[#1ebc59] text-white font-bold py-1.5 rounded-lg text-center shadow-xs flex items-center justify-center space-x-1">
+              <i class="fa-solid fa-check-double text-xs"></i>
               <span>Mark Done (Log 1.0 ml)</span>
+            </button>
+            
+            <button onclick="openRealWhatsApp()" class="w-full bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 font-semibold py-1.5 rounded-lg text-center flex items-center justify-center space-x-1 text-[11px]">
+              <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+              <span>Open Official WhatsApp Chat</span>
             </button>
           </div>
           <span class="text-[9px] text-slate-400 block text-right">10:01 PM</span>
         </div>
 
         <div id="whatsappReplyBubble" class="hidden flex justify-end">
-          <div class="bg-[#DCF8C6] text-slate-800 rounded-xl rounded-tr-none p-3 shadow-xs max-w-[80%]">
-            <p>Done! Applied 1.0 ml Minoxidil to vertex scalp. ✓</p>
-            <span class="text-[9px] text-slate-500 block text-right mt-1">10:02 PM</span>
+          <div class="bg-[#DCF8C6] text-slate-800 rounded-xl rounded-tr-none p-2 shadow-xs">
+            Done! Applied 1.0 ml Minoxidil. Volume synced. ✓
+            <span class="text-[9px] text-slate-500 block text-right mt-0.5">10:02 PM</span>
           </div>
         </div>
       </div>
 
-      <div class="p-3 bg-[#F0F0F0] text-center text-[11px] text-slate-500 border-t border-slate-200">
+      <div class="p-2 bg-[#F0F0F0] text-center text-[10px] text-slate-500 border-t border-slate-200">
         Interactive WhatsApp Reminder Simulation
       </div>
+
     </div>
   </div>
 
-  <!-- MODAL: 1-TAP REORDER REFILL CHECKOUT -->
+  <!-- REORDER MODAL -->
   <div id="reorderModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center hidden p-4">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-oat-border space-y-4">
+    <div class="bg-white rounded-2xl sm:rounded-3xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-oat-border space-y-4">
       <div class="flex items-center justify-between border-b border-oat-border pb-3">
-        <h3 class="font-bold text-slate-900 text-base flex items-center space-x-2">
+        <h3 class="font-bold text-slate-900 text-sm sm:text-base flex items-center space-x-2">
           <i class="fa-solid fa-bolt text-terracotta-500"></i>
           <span>1-Tap Regimen Replenishment</span>
         </h3>
@@ -880,21 +897,21 @@
       </div>
 
       <div class="flex space-x-2 pt-2">
-        <button onclick="closeReorderModal()" class="w-1/2 py-2.5 rounded-xl border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50">
+        <button onclick="closeReorderModal()" class="w-1/2 py-2 rounded-xl border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50">
           Cancel
         </button>
-        <button onclick="executeRefill()" class="w-1/2 py-2.5 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white text-xs font-bold transition shadow-xs">
+        <button onclick="executeRefill()" class="w-1/2 py-2 rounded-xl bg-terracotta-500 hover:bg-terracotta-600 text-white text-xs font-bold transition shadow-xs">
           Confirm Refill
         </button>
       </div>
     </div>
   </div>
 
-  <!-- MODAL: WHY SHEDDING HAPPENS GUIDE -->
+  <!-- SHEDDING MODAL -->
   <div id="sheddingModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center hidden p-4">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-oat-border space-y-4">
+    <div class="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full p-5 sm:p-6 shadow-2xl border border-oat-border space-y-4">
       <div class="flex items-center justify-between border-b border-oat-border pb-3">
-        <h3 class="font-bold text-slate-900 text-base flex items-center space-x-2">
+        <h3 class="font-bold text-slate-900 text-sm sm:text-base flex items-center space-x-2">
           <i class="fa-solid fa-shield-cat text-amber-600"></i>
           <span>The Science of Week 3–8 Shedding</span>
         </h3>
@@ -922,23 +939,20 @@
   <!-- SCRIPT ENGINE: AUTH, DB & STATE MANAGEMENT -->
   <!-- ========================================== -->
   <script>
-    // -------------------------------------------------------------
-    // 1. FIREBASE CONFIGURATION (Replace with your Firebase Console keys)
-    // -------------------------------------------------------------
-   const firebaseConfig = {
-  apiKey: "AIzaSyBmrLGN2S3qgtNvrf7bO06Rd7pGM8C6gbQ",
-  authDomain: "man-matters.firebaseapp.com",
-  projectId: "man-matters",
-  storageBucket: "man-matters.firebasestorage.app",
-  messagingSenderId: "807032636917",
-  appId: "1:807032636917:web:3a69cd70265de660730cbc",
-  measurementId: "G-KT8MX1RL0G"
-};
+    // 1. FIREBASE CONFIGURATION
+    const firebaseConfig = {
+      apiKey: "AIzaSyBmrLGN2S3qgtNvrf7bO06Rd7pGM8C6gbQ",
+      authDomain: "man-matters.firebaseapp.com",
+      projectId: "man-matters",
+      storageBucket: "man-matters.firebasestorage.app",
+      messagingSenderId: "807032636917",
+      appId: "1:807032636917:web:3a69cd70265de660730cbc",
+      measurementId: "G-KT8MX1RL0G"
+    };
 
     let auth, db, currentUser = null;
     let isFirebaseConfigured = false;
 
-    // Safe initialization with fallback to localStorage
     try {
       if (firebaseConfig.apiKey && !firebaseConfig.apiKey.includes("YOUR_API_KEY")) {
         firebase.initializeApp(firebaseConfig);
@@ -947,12 +961,10 @@
         isFirebaseConfigured = true;
       }
     } catch (e) {
-      console.warn("Firebase not fully configured yet. Running on LocalStorage fallback mode.");
+      console.warn("Using local fallback mode.");
     }
 
-    // -------------------------------------------------------------
-    // 2. AUDIO SYNTHESIZER (Web Audio API)
-    // -------------------------------------------------------------
+    // 2. AUDIO SYNTHESIZER
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     function playChime(freq = 523.25) {
       if (audioCtx.state === 'suspended') audioCtx.resume();
@@ -968,22 +980,18 @@
       osc.stop(audioCtx.currentTime + 0.4);
     }
 
-    // -------------------------------------------------------------
     // 3. REGIMEN STATE VARIABLES
-    // -------------------------------------------------------------
     let minoxRemaining = 7.0;
     let biotinRemaining = 42;
     let shampooRemaining = 135.0;
     let dhtRemaining = 30;
     let streakDays = 18;
     let dosesLoggedToday = 2;
+    let savedPhoneNumber = localStorage.getItem('mm_user_phone') || "";
 
-    // -------------------------------------------------------------
     // 4. GOOGLE AUTHENTICATION & DATA SYNC
-    // -------------------------------------------------------------
     function loginWithGoogle() {
       if (!isFirebaseConfigured) {
-        // Fallback demo simulation if Firebase credentials are blank
         const fakeName = prompt("Enter your Name for demo sync:", "Rahul Sharma") || "Rahul Sharma";
         currentUser = {
           displayName: fakeName,
@@ -1034,7 +1042,6 @@
       }
     }
 
-    // Load data from Firestore or LocalStorage
     function loadUserData(userId) {
       if (isFirebaseConfigured && db) {
         db.collection("users").doc(userId).get().then((doc) => {
@@ -1044,6 +1051,11 @@
             biotinRemaining = data.biotinRemaining !== undefined ? data.biotinRemaining : biotinRemaining;
             streakDays = data.streakDays !== undefined ? data.streakDays : streakDays;
             dosesLoggedToday = data.dosesLoggedToday !== undefined ? data.dosesLoggedToday : dosesLoggedToday;
+            if (data.phone) {
+              savedPhoneNumber = data.phone.replace("+91", "");
+              localStorage.setItem('mm_user_phone', savedPhoneNumber);
+              initPhoneSettings();
+            }
             updateMinoxVisuals();
           } else {
             saveUserData();
@@ -1062,13 +1074,13 @@
       }
     }
 
-    // Save data to Firestore and LocalStorage
     function saveUserData() {
       const payload = {
         minoxRemaining: parseFloat(minoxRemaining),
         biotinRemaining: biotinRemaining,
         streakDays: streakDays,
         dosesLoggedToday: dosesLoggedToday,
+        phone: savedPhoneNumber ? `+91${savedPhoneNumber}` : "",
         lastUpdated: new Date().toISOString()
       };
 
@@ -1079,7 +1091,6 @@
       }
     }
 
-    // Listen for Auth changes if Firebase configured
     if (isFirebaseConfigured && auth) {
       auth.onAuthStateChanged((user) => {
         if (user) {
@@ -1090,9 +1101,53 @@
       });
     }
 
-    // -------------------------------------------------------------
-    // 5. NAVIGATION & REGIMEN INTERACTIONS
-    // -------------------------------------------------------------
+    // 5. PHONE NUMBER & WHATSAPP SETTINGS
+    function initPhoneSettings() {
+      const phoneInput = document.getElementById('userPhoneInput');
+      const notice = document.getElementById('phoneSaveNotice');
+      if (savedPhoneNumber && phoneInput) {
+        phoneInput.value = savedPhoneNumber;
+        if (notice) notice.classList.remove('hidden');
+      }
+    }
+
+    function saveUserPhoneNumber() {
+      const phoneInput = document.getElementById('userPhoneInput');
+      const val = phoneInput.value.trim();
+      
+      if (!/^[6-9]\d{9}$/.test(val)) {
+        alert("Please enter a valid 10-digit Indian mobile number.");
+        return;
+      }
+      
+      savedPhoneNumber = val;
+      localStorage.setItem('mm_user_phone', val);
+      saveUserData();
+
+      document.getElementById('phoneSaveNotice').classList.remove('hidden');
+      alert(`Phone number +91 ${val} linked successfully for daily WhatsApp reminders!`);
+    }
+
+    function openRealWhatsApp() {
+      const phone = savedPhoneNumber || "919137027480";
+      const message = encodeURIComponent("Hey Man Matters Care Team! I am on Day 42 of my Minoxidil & Biotin regimen. Please sync my streak.");
+      window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+    }
+
+    function toggleWhatsAppModal(show) {
+      document.getElementById('whatsappModal').classList.toggle('hidden', !show);
+    }
+
+    function whatsappLogMinoxidil() {
+      playChime(783.99);
+      document.getElementById('whatsappReplyBubble').classList.remove('hidden');
+      logDose('minoxidil', 1, 'ml');
+      setTimeout(() => {
+        toggleWhatsAppModal(false);
+      }, 1200);
+    }
+
+    // 6. NAVIGATION & DOSE LOGGING
     function switchTab(tabId) {
       ['overview', 'routine', 'calendar', 'journal', 'pouch', 'ai'].forEach(t => {
         document.getElementById(`view-${t}`).classList.add('hidden');
@@ -1117,22 +1172,21 @@
         updateMinoxVisuals();
         const btn = document.getElementById('btn-minoxidil');
         btn.innerHTML = `<i class="fa-solid fa-check"></i> Applied 1.0ml`;
-        btn.classList.remove('bg-amber-500', 'text-slate-950');
-        btn.classList.add('bg-herbal-500', 'text-white');
+        btn.className = "w-full sm:w-auto justify-center bg-herbal-500 text-white font-bold text-xs px-3.5 py-2 rounded-xl transition flex items-center space-x-1.5 shadow-xs";
       } else if (product === 'biotin') {
         biotinRemaining = Math.max(0, biotinRemaining - amount);
         document.getElementById('biotinQtyText').innerText = `${biotinRemaining} / 60 gummies`;
         document.getElementById('cardBiotinQty').innerText = biotinRemaining;
         const btn = document.getElementById('btn-biotin');
         btn.innerText = 'Completed ✓';
-        btn.classList.add('bg-slate-100', 'text-slate-400');
+        btn.className = "w-full sm:w-auto justify-center bg-slate-100 text-slate-400 font-bold text-xs px-3.5 py-2 rounded-xl transition";
       } else if (product === 'dht') {
         dhtRemaining = Math.max(0, dhtRemaining - amount);
         document.getElementById('dhtQtyText').innerText = `${dhtRemaining} / 60 caps`;
         document.getElementById('cardDhtQty').innerText = dhtRemaining;
         const btn = document.getElementById('btn-dht');
         btn.innerText = 'Completed ✓';
-        btn.classList.add('bg-slate-100', 'text-slate-400');
+        btn.className = "w-full sm:w-auto justify-center bg-slate-100 text-slate-400 font-bold text-xs px-3.5 py-2 rounded-xl transition";
       }
       
       dosesLoggedToday = 3;
@@ -1150,22 +1204,7 @@
       document.getElementById('barMinox').style.width = `${pct}%`;
     }
 
-    // -------------------------------------------------------------
-    // 6. WHATSAPP & REORDER WORKFLOWS
-    // -------------------------------------------------------------
-    function toggleWhatsAppModal(show) {
-      document.getElementById('whatsappModal').classList.toggle('hidden', !show);
-    }
-
-    function whatsappLogMinoxidil() {
-      playChime(783.99);
-      document.getElementById('whatsappReplyBubble').classList.remove('hidden');
-      logDose('minoxidil', 1, 'ml');
-      setTimeout(() => {
-        toggleWhatsAppModal(false);
-      }, 1200);
-    }
-
+    // 7. REORDER & MODAL HANDLERS
     function openReorderModal(name, price) {
       document.getElementById('reorderProductName').innerText = name;
       document.getElementById('reorderProductPrice').innerText = `₹${price} (Express Delivery)`;
@@ -1189,45 +1228,49 @@
     function openSheddingModal() { document.getElementById('sheddingModal').classList.remove('hidden'); }
     function closeSheddingModal() { document.getElementById('sheddingModal').classList.add('hidden'); }
 
-    // -------------------------------------------------------------
-    // 7. CALENDAR & QUICK STRIP INITIALIZATION
-    // -------------------------------------------------------------
+    // 8. CALENDAR INITIALIZATION
     function initCalendar() {
       const quickStrip = document.getElementById('weeklyQuickStrip');
       const days = ['Mon 12', 'Tue 13', 'Wed 14', 'Thu 15', 'Fri 16 (Today)', 'Sat 17', 'Sun 18'];
-      days.forEach((d, i) => {
-        const isDone = i < 4;
-        const isToday = i === 4;
-        quickStrip.innerHTML += `
-          <div class="p-2 rounded-xl border ${isToday ? 'border-slate-800 bg-slate-50' : 'border-slate-200'}">
-            <div class="text-[10px] font-bold ${isToday ? 'text-slate-900' : 'text-slate-400'}">${d}</div>
-            <div class="mt-1 text-sm font-bold ${isDone ? 'text-herbal-600' : isToday ? 'text-amber-500' : 'text-slate-300'}">
-              ${isDone ? '✓' : isToday ? 'Active' : '–'}
+      if (quickStrip) {
+        quickStrip.innerHTML = '';
+        days.forEach((d, i) => {
+          const isDone = i < 4;
+          const isToday = i === 4;
+          quickStrip.innerHTML += `
+            <div class="p-1.5 sm:p-2 rounded-xl border ${isToday ? 'border-slate-800 bg-slate-50' : 'border-slate-200'}">
+              <div class="text-[9px] sm:text-[10px] font-bold ${isToday ? 'text-slate-900' : 'text-slate-400'}">${d}</div>
+              <div class="mt-1 text-xs sm:text-sm font-bold ${isDone ? 'text-herbal-600' : isToday ? 'text-amber-500' : 'text-slate-300'}">
+                ${isDone ? '✓' : isToday ? 'Active' : '–'}
+              </div>
             </div>
-          </div>
-        `;
-      });
+          `;
+        });
+      }
 
       const fullGrid = document.getElementById('fullMonthCalendarGrid');
-      for (let i = 1; i <= 31; i++) {
-        let status = '–';
-        let bgClass = 'bg-slate-50 text-slate-400';
-        if (i < 16) {
-          status = '✓';
-          bgClass = 'bg-herbal-50 text-herbal-700 border border-herbal-200';
-        } else if (i === 16) {
-          status = '✓ Today';
-          bgClass = 'bg-slate-900 text-white font-bold';
-        } else if (i === 14) {
-          status = '🛡️ Grace';
-          bgClass = 'bg-amber-50 text-amber-800 border border-amber-200';
+      if (fullGrid) {
+        fullGrid.innerHTML = '';
+        for (let i = 1; i <= 31; i++) {
+          let status = '–';
+          let bgClass = 'bg-slate-50 text-slate-400';
+          if (i < 16) {
+            status = '✓';
+            bgClass = 'bg-herbal-50 text-herbal-700 border border-herbal-200';
+          } else if (i === 16) {
+            status = '✓ Today';
+            bgClass = 'bg-slate-900 text-white font-bold';
+          } else if (i === 14) {
+            status = '🛡️ Grace';
+            bgClass = 'bg-amber-50 text-amber-800 border border-amber-200';
+          }
+          fullGrid.innerHTML += `
+            <div onclick="toggleCalendarDay(this, ${i})" class="h-10 sm:h-12 rounded-xl ${bgClass} flex flex-col items-center justify-center cursor-pointer transition hover:scale-105 p-0.5 sm:p-1 text-[9px] sm:text-[10px]">
+              <span class="opacity-75">${i}</span>
+              <span class="font-bold">${status}</span>
+            </div>
+          `;
         }
-        fullGrid.innerHTML += `
-          <div onclick="toggleCalendarDay(this, ${i})" class="h-12 rounded-xl ${bgClass} flex flex-col items-center justify-center cursor-pointer transition hover:scale-105 p-1">
-            <span class="text-[10px] opacity-75">${i}</span>
-            <span class="text-[10px] font-bold">${status}</span>
-          </div>
-        `;
       }
     }
 
@@ -1239,27 +1282,34 @@
       saveUserData();
     }
 
-    // -------------------------------------------------------------
-    // 8. SPLIT COMPARISON SLIDER & AI CHATBOT
-    // -------------------------------------------------------------
+    // 9. DUAL TOUCH & MOUSE COMPARISON SLIDER
     const wrapper = document.getElementById('sliderWrapper');
     const fg = document.getElementById('sliderForeground');
     const handle = document.getElementById('sliderHandle');
     let isDragging = false;
 
     if (wrapper) {
+      const updateSlider = (clientX) => {
+        const rect = wrapper.getBoundingClientRect();
+        let x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+        let pct = (x / rect.width) * 100;
+        fg.style.width = `${pct}%`;
+        handle.style.left = `${pct}%`;
+      };
+
       wrapper.addEventListener('mousedown', () => isDragging = true);
       window.addEventListener('mouseup', () => isDragging = false);
       wrapper.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
-        const rect = wrapper.getBoundingClientRect();
-        let x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
-        let pct = (x / rect.width) * 100;
-        fg.style.width = `${pct}%`;
-        handle.style.left = `${pct}%`;
+        updateSlider(e.clientX);
+      });
+
+      wrapper.addEventListener('touchmove', (e) => {
+        updateSlider(e.touches[0].clientX);
       });
     }
 
+    // 10. AI CHATBOT LOGIC
     function sendQuickQuery(text) {
       document.getElementById('chatInput').value = text;
       handleChatSubmit(new Event('submit'));
@@ -1320,9 +1370,10 @@
       alert('Custom Habit Builder: You can add extra self-care habits (scalp massage, derma-rolling, water intake) to your schedule.');
     }
 
-    // Initialize Page
+    // INITIALIZATION
     window.addEventListener('DOMContentLoaded', () => {
       initCalendar();
+      initPhoneSettings();
       loadUserData('guest');
     });
   </script>
